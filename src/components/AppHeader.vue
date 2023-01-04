@@ -21,7 +21,7 @@
                 duration: 1000,
               },
             }"
-            >Nikola G. Petrovski</span
+            >Nikola G.</span
           >
           <br class="md:hidden" />
           <span

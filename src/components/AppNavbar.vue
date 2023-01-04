@@ -83,10 +83,18 @@
             </div>
             <div class="px-5 py-6 space-y-6">
               <div class="flex flex-col text-clrSecondary">
-                <a href="#" class="text-lg hover:text-clrAccent">About</a>
-                <a href="#" class="text-lg hover:text-clrAccent">Work</a>
-                <a href="#" class="text-lg hover:text-clrAccent">Contact</a>
-                <a href="#" class="text-lg hover:text-clrAccent">Blog</a>
+                <a href="/#about" class="text-lg hover:text-clrAccent">About</a>
+                <a href="/#projects" class="text-lg hover:text-clrAccent"
+                  >Work</a
+                >
+                <a href="/#contact" class="text-lg hover:text-clrAccent"
+                  >Contact</a
+                >
+                <router-link
+                  :to="{ name: 'blog_posts' }"
+                  class="text-lg hover:text-clrAccent"
+                  >Blog</router-link
+                >
                 <div
                   class="flex justify-center gap-5 mt-10 align-baseline md:gap-20 md:w-1/2"
                 >
