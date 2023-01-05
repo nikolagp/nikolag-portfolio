@@ -1,5 +1,5 @@
 <template>
-  <main class="text-clrSecondary sm:py-32 lg:py-30" id="contact">
+  <section class="text-clrSecondary sm:py-32 lg:py-30" id="contact">
     <div class="py-6 mx-auto my-24 max-w-7xl">
       <section class="mb-10 text-center text-clrSecondary md:text-left">
         <h2 class="px-8 mb-12 text-4xl font-bold">Contact</h2>
@@ -78,7 +78,7 @@
         </div>
       </section>
     </div>
-  </main>
+  </section>
 </template>
 
 <script setup>

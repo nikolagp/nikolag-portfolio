@@ -1,5 +1,5 @@
 <template>
-  <main id="projects">
+  <section id="projects">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <!-- Project title and list -->
       <div
@@ -150,7 +150,7 @@
         </div>
       </div>
     </div>
-  </main>
+  </section>
 </template>
 
 <script>

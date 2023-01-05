@@ -1,6 +1,8 @@
 <template>
-  <main>
-    <div class="relative flex flex-col justify-center h-screen px-6 lg:px-6">
+  <section>
+    <div
+      class="relative flex flex-col justify-center px-6 sm:py-20 md:h-screen lg:px-6"
+    >
       <!-- class="flex flex-col justify-between pt-20 pb-32 mx-auto align-bottom sm:pt-48 sm:pb-40" -->
       <div class="flex flex-col gap-8 justify-evenly">
         <h1
@@ -94,7 +96,7 @@
         </div>
       </div>
     </div>
-  </main>
+  </section>
 </template>
 
 <script setup>

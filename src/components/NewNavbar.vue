@@ -154,15 +154,15 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
 const navigation = [
   {
     name: "About",
-    href: "https://nikolag-portfolio.netlify.app/#about",
+    href: "/#about",
     current: true,
   },
   {
     name: "Projects",
-    href: "https://nikolag-portfolio.netlify.app/#projects",
+    href: "/#projects",
     current: false,
   },
-  { name: "Contact", href: "#contact", current: false },
+  { name: "Contact", href: "/#contact", current: false },
   { name: "Blog", href: "#", current: false },
 ];
 </script>

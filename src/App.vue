@@ -1,7 +1,7 @@
-<template v-cloak class="overflow-x-hidden scroll-smooth">
+<template v-cloak>
   <div>
     <!-- <AppNavbar /> -->
-    <NewNavbar />
+    <!-- <NewNavbar /> -->
     <router-view />
     <AppFooter />
   </div>
@@ -10,7 +10,7 @@
 <script setup>
 import AppNavbar from "@/components/AppNavbar.vue";
 import AppFooter from "./components/AppFooter.vue";
-import NewNavbar from "./components/NewNavbar.vue";
+// import NewNavbar from "./components/NewNavbar.vue";
 </script>
 
 <style>
