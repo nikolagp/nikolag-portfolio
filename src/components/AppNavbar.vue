@@ -1,7 +1,7 @@
 <template>
   <main id="nav">
     <Popover
-      class="fixed top-0 left-0 right-0 text-clrSecondary bg-clrPrimaryLight"
+      class="fixed top-0 left-0 right-0 z-10 text-clrSecondary bg-clrPrimaryLight"
     >
       <div class="px-4 mx-auto max-w-7xl sm:px-6">
         <div
@@ -96,7 +96,7 @@
                   >Blog</router-link
                 >
                 <div
-                  class="flex justify-center gap-5 mt-10 align-baseline md:gap-20 md:w-1/2"
+                  class="flex justify-center gap-5 mt-10 align-baseline sm:hidden md:gap-20 md:w-1/2"
                 >
                   <a :href="github" target="_blank"
                     ><i

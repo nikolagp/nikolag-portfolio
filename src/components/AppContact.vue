@@ -53,11 +53,11 @@
             data-aos="fade-right"
             data-aos-offset="0"
             data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
+            data-aos-easing="ease-in"
             data-aos-mirror="true"
             data-aos-once="false"
             data-aos-anchor-placement="top-center"
-            class="flex justify-center gap-5 mt-10 align-baseline md:gap-20 md:w-1/2"
+            class="flex justify-center gap-5 my-10 align-baseline md:gap-20 md:w-1/2"
           >
             <a :href="github" target="_blank"
               ><i
