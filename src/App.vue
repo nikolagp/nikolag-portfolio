@@ -1,4 +1,4 @@
-<template v-cloak class="scroll-smooth">
+<template v-cloak class="overflow-x-hidden scroll-smooth">
   <div>
     <AppNavbar />
     <router-view />

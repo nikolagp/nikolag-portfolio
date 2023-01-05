@@ -1,7 +1,7 @@
 <template>
   <main id="nav">
     <Popover
-      class="fixed top-0 left-0 right-0 z-10 text-clrSecondary bg-clrPrimaryLight"
+      class="fixed top-0 left-0 right-0 text-clrSecondary bg-clrPrimaryLight"
     >
       <div class="px-4 mx-auto max-w-7xl sm:px-6">
         <div
@@ -19,7 +19,7 @@
           </div>
           <div class="-my-2 -mr-2 md:hidden">
             <PopoverButton
-              class="inline-flex items-center justify-center p-2 rounded-md text-clrSecondary focus:outline-none"
+              class="inline-flex items-center justify-center p-2 rounded-md text-clrSecondary focus:outline-none md:hidden"
             >
               <span class="sr-only">Open menu</span>
               <Bars3Icon class="w-6 h-6" aria-hidden="true" />
@@ -62,7 +62,7 @@
       >
         <PopoverPanel
           focus
-          class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden"
+          class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform"
         >
           <div class="rounded-lg shadow-lg bg-clrPrimary divide-gray-50">
             <div class="px-5 pt-5 pb-6">
