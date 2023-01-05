@@ -80,7 +80,9 @@
             </div>
             <div class="px-5 py-6 space-y-6">
               <div class="flex flex-col text-clrSecondary">
-                <a href="#" class="text-lg hover:text-clrAccent">About</a>
+                <a @click="scroll(id)" class="text-lg hover:text-clrAccent"
+                  >About</a
+                >
                 <a href="#" class="text-lg hover:text-clrAccent">Work</a>
                 <a href="#" class="text-lg hover:text-clrAccent">Contact</a>
                 <a href="#" class="text-lg hover:text-clrAccent">Blog</a>
@@ -148,11 +150,11 @@ import {
 // import AppButtonEmpty from "./AppButtonEmpty.vue";
 // import AppButtonFull from "./AppButtonFull.vue";
 
-const scroll = window.scrollTo({
-  top: 100,
-  left: 100,
-  behavior: "smooth",
-});
+const scroll = (id) => {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth",
+  });
+};
 
 // const scrollPageTo = (navEl) => {
 //   console.log(`#${navEl}`);
