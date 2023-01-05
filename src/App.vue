@@ -1,6 +1,6 @@
 <template v-cloak>
   <div>
-    <!-- <AppNavbar /> -->
+    <AppNavbar />
     <!-- <NewNavbar /> -->
     <router-view />
     <AppFooter />

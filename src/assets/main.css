@@ -9,6 +9,17 @@
   --clrAccentLight: rgb(221, 82, 69, 0.7);
 }
 
+/* html,
+body {
+  scroll-snap-type: y mandatory;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+} */
+
 body {
   background-color: var(--clrPrimary);
   background-image: url(/assets/images/background.svg);

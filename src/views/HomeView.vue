@@ -1,8 +1,8 @@
 <template>
-  <NewNavbar />
+  <!-- <NewNavbar /> -->
   <AppHeader />
   <AppAbout />
-  <AppProjects />
+  <AppProjects id="projects" />
   <AppContact />
 </template>
 
@@ -11,7 +11,7 @@ import AppAbout from "@/components/AppAbout.vue";
 import AppProjects from "@/components/AppProjects.vue";
 import AppContact from "@/components/AppContact.vue";
 import AppHeader from "@/components/AppHeader.vue";
-import NewNavbar from "../components/NewNavbar.vue";
+// import NewNavbar from "../components/NewNavbar.vue";
 </script>
 
 <style></style>

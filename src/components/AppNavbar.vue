@@ -26,19 +26,16 @@
             </PopoverButton>
           </div>
           <PopoverGroup as="nav" class="hidden space-x-10 md:flex">
-            <a
-              href="/#about"
-              class="text-base font-medium hover:text-clrAccent"
-            >
+            <a href="#about" class="text-base font-medium hover:text-clrAccent">
               About</a
             >
             <a
-              href="/#projects"
+              href="#projects"
               class="text-base font-medium hover:text-clrAccent"
               >Work</a
             >
             <a
-              href="/#contact"
+              href="#contact"
               class="text-base font-medium hover:text-clrAccent"
               >Contact</a
             >
@@ -158,6 +155,12 @@ import {
 // import router from "../router";
 // import AppButtonEmpty from "./AppButtonEmpty.vue";
 // import AppButtonFull from "./AppButtonFull.vue";
+
+const scroll = window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: "smooth",
+});
 
 // const scrollPageTo = (navEl) => {
 //   console.log(`#${navEl}`);
