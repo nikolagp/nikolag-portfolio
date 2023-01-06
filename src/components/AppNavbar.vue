@@ -1,5 +1,5 @@
 <template>
-  <main id="nav" :class="{ 'navbar--hidden': !showNavbar }">
+  <main id="nav" v-if="showNavbar">
     <Popover class="fixed top-0 left-0 right-0 z-10 text-clrSecondary">
       <div class="px-4 mx-auto max-w-7xl sm:px-6">
         <div
@@ -137,6 +137,7 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 import {
   Popover,
   PopoverButton,
@@ -155,6 +156,29 @@ const currentRoute = computed(() => {
 const twitter = "https://twitter.com/amagi_dev";
 const github = "https://github.com/nikolagp";
 const linkedin = "https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/";
+
+const showNavbar = ref(true);
+let previousScrollPosition = 0;
+
+const handleScroll = () => {
+  const currentScrollPosition = window.scrollY;
+
+  if (currentScrollPosition < previousScrollPosition) {
+    showNavbar.value = true;
+  } else {
+    showNavbar.value = false;
+  }
+
+  previousScrollPosition = currentScrollPosition;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <style scoped>
