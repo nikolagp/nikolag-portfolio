@@ -15,10 +15,11 @@
           data-aos-once="false"
           data-aos-anchor-placement="top-center"
         >
-          <form name="contact" data-netlify="true">
+          <form name="contact" method="POST" data-netlify="true">
             <div class="mb-6 form-group">
               <input
                 type="email"
+                email="email"
                 class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput8"
                 placeholder="Email"
@@ -28,6 +29,7 @@
             <div class="mb-6 form-group">
               <input
                 type="text"
+                subject="subject"
                 class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput7"
                 placeholder="Subject"
@@ -36,6 +38,7 @@
 
             <div class="mb-6 form-group">
               <textarea
+                name="message"
                 class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleFormControlTextarea13"
                 rows="3"
