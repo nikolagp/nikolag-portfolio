@@ -4,6 +4,8 @@ import BlogPosts from "@/views/blog/BlogPosts.vue";
 import SinglePost from "@/views/blog/SinglePost.vue";
 import CreateView from "@/views/CreateView.vue";
 import AppAbout from "@/components/AppAbout.vue";
+import AppProjects from "@/components/AppProjects.vue";
+import AppContact from "@/components/AppContact.vue";
 
 const router = createRouter({
   scrollBehavior() {
@@ -21,6 +23,16 @@ const router = createRouter({
       path: "/about",
       name: "about",
       component: AppAbout,
+    },
+    {
+      path: "/projects",
+      name: "projects",
+      component: AppProjects,
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: AppContact,
     },
     {
       path: "/blog",

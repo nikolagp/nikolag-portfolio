@@ -1,8 +1,6 @@
 <template>
   <main id="nav">
-    <Popover
-      class="fixed top-0 left-0 right-0 z-10 text-clrSecondary bg-clrPrimaryLight"
-    >
+    <Popover class="fixed top-0 left-0 right-0 z-10 text-clrSecondary">
       <div class="px-4 mx-auto max-w-7xl sm:px-6">
         <div
           class="flex items-center justify-between py-6 md:justify-start md:space-x-10"
@@ -26,18 +24,20 @@
             </PopoverButton>
           </div>
           <PopoverGroup as="nav" class="hidden space-x-10 md:flex">
-            <a href="#about" class="text-base font-medium hover:text-clrAccent">
-              About</a
-            >
-            <a
-              href="#projects"
+            <router-link
+              :to="{ name: 'about' }"
               class="text-base font-medium hover:text-clrAccent"
-              >Work</a
+              >About</router-link
             >
-            <a
-              href="#contact"
+            <router-link
+              :to="{ name: 'projects' }"
               class="text-base font-medium hover:text-clrAccent"
-              >Contact</a
+              >Projects</router-link
+            >
+            <router-link
+              :to="{ name: 'contact' }"
+              class="text-base font-medium hover:text-clrAccent"
+              >Contact</router-link
             >
             <router-link
               :to="{ name: 'blog_posts' }"
@@ -80,12 +80,26 @@
             </div>
             <div class="px-5 py-6 space-y-6">
               <div class="flex flex-col text-clrSecondary">
-                <a @click="scroll(id)" class="text-lg hover:text-clrAccent"
-                  >About</a
+                <router-link
+                  :to="{ name: 'about' }"
+                  class="text-base font-medium hover:text-clrAccent"
+                  >About</router-link
                 >
-                <a href="#" class="text-lg hover:text-clrAccent">Work</a>
-                <a href="#" class="text-lg hover:text-clrAccent">Contact</a>
-                <a href="#" class="text-lg hover:text-clrAccent">Blog</a>
+                <router-link
+                  :to="{ name: 'projects' }"
+                  class="text-base font-medium hover:text-clrAccent"
+                  >Projects</router-link
+                >
+                <router-link
+                  :to="{ name: 'contact' }"
+                  class="text-base font-medium hover:text-clrAccent"
+                  >Contact</router-link
+                >
+                <router-link
+                  :to="{ name: 'blog_posts' }"
+                  class="text-base font-medium hover:text-clrAccent"
+                  >Blog</router-link
+                >
                 <div
                   class="flex justify-center gap-5 mt-10 align-baseline sm:hidden md:gap-20 md:w-1/2"
                 >
