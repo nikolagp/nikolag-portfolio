@@ -1,5 +1,5 @@
 <template>
-  <main class="py-8" v-motion-slide-left>
+  <main class="px-8 py-8" v-motion-slide-left>
     <div
       class="relative w-full overflow-hidden bg-white rounded-lg h-80 group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1"
     >

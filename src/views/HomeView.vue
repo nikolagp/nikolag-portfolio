@@ -1,8 +1,10 @@
 <template>
-  <AppHeader />
-  <AppAbout />
-  <AppProjects />
-  <AppContact />
+  <div class="px-6 md:px-0">
+    <AppHeader />
+    <AppAbout />
+    <AppProjects />
+    <AppContact />
+  </div>
 </template>
 
 <script setup>

@@ -1,6 +1,6 @@
 <template>
-  <section id="about" class="text-clrSecondary sm:py-32 lg:py-30 page">
-    <div class="px-6 mx-auto max-w-7xl lg:px-8">
+  <section id="about" class="mt-10 text-clrSecondary sm:py-32 lg:py-30">
+    <div class="px-6 mx-auto my-24 max-w-7xl lg:px-8">
       <h2 class="text-4xl font-bold text-left text-clrSecondary md:text-left">
         About
       </h2>

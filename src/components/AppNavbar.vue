@@ -127,18 +127,7 @@
                     ></i
                   ></a>
                 </div>
-                <!-- <a
-                v-for="item in resources"
-                :key="item.name"
-                :href="item.href"
-                class="text-base font-medium text-gray-900 hover:text-gray-700"
-                >{{ item.name }}</a
-              > -->
               </div>
-              <!-- <div class="flex flex-col-reverse">
-                <AppButtonFull> Download CV </AppButtonFull>
-                <AppButtonEmpty> Contact Me </AppButtonEmpty>
-              </div> -->
             </div>
           </div>
         </PopoverPanel>
@@ -154,49 +143,18 @@ import {
   PopoverGroup,
   PopoverPanel,
 } from "@headlessui/vue";
-import {
-  // ArrowPathIcon,
-  Bars3Icon,
-  // BookmarkSquareIcon,
-  // CalendarIcon,
-  // ChartBarIcon,
-  // CursorArrowRaysIcon,
-  // LifebuoyIcon,
-  // PhoneIcon,
-  // PlayIcon,
-  // ShieldCheckIcon,
-  // Squares2X2Icon,
-  XMarkIcon,
-} from "@heroicons/vue/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { useRoute, useRouter } from "vue-router";
 import { computed } from "vue";
-// import router from "../router";
-// import AppButtonEmpty from "./AppButtonEmpty.vue";
-// import AppButtonFull from "./AppButtonFull.vue";
-
-// const scroll = (id) => {
-//   document.getElementById(id).scrollIntoView({
-//     behavior: "smooth",
-//   });
-// };
 
 const route = useRoute();
-// const router = useRouter();
-
 const currentRoute = computed(() => {
   return route.name;
 });
 
-// const nameRoute = computed(() => {
-//   return route.name;
-// });
-
-// const scrollPageTo = (navEl) => {
-//   console.log(`#${navEl}`);
-//   let element = document.querySelector(`#${navEl}`);
-//   console.log(element);
-//   element.scrollIntoView({ behavior: "smooth" });
-// };
+const twitter = "https://twitter.com/amagi_dev";
+const github = "https://github.com/nikolagp";
+const linkedin = "https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/";
 </script>
 
 <style scoped>

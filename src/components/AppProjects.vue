@@ -1,8 +1,10 @@
 <template>
-  <section class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 page">
+  <section
+    class="px-4 mx-auto mt-10 align-middle sm:py-32 lg:py-30 max-w-7xl sm:px-6 lg:px-8 page"
+  >
     <!-- Project title and list -->
     <div
-      class="max-w-2xl py-10 mx-auto sm:py-24 lg:max-w-none hover:border-b-2-clrAccent lg:py-32"
+      class="max-w-2xl mx-auto my-24 sm:py-24 lg:max-w-none hover:border-b-2-clrAccent lg:py-32"
     >
       <h2 class="text-4xl font-bold text-clrSecondary md:text-left">
         Projects
@@ -59,7 +61,7 @@
           data-aos-mirror="true"
           data-aos-once="false"
           data-aos-anchor-placement="top-center"
-          class="cursor-pointer md:w-3/4"
+          class="px-6 cursor-pointer md:w-3/4"
         >
           <!-- VueJS -->
           <div

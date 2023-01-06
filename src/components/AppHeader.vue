@@ -4,7 +4,7 @@
       <!-- class="flex flex-col justify-between pt-20 pb-32 mx-auto align-bottom sm:pt-48 sm:pb-40" -->
       <div class="flex flex-col gap-8 justify-evenly">
         <h1
-          class="px-10 py-10 text-3xl font-bold tracking-tight text-center md:text-6xl"
+          class="px-10 py-10 text-5xl font-bold tracking-tight text-left md:text-center md:text-6xl"
         >
           <span
             class="text-clrSecondary"
