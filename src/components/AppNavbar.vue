@@ -1,6 +1,8 @@
 <template>
   <main id="nav" v-if="showNavbar">
-    <Popover class="fixed top-0 left-0 right-0 z-10 text-clrSecondary">
+    <Popover
+      class="fixed top-0 left-0 right-0 z-10 text-clrSecondary bg-clrPrimaryLight"
+    >
       <div class="px-4 mx-auto max-w-7xl sm:px-6">
         <div
           class="flex items-center justify-between py-6 md:justify-start md:space-x-10"
