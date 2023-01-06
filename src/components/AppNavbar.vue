@@ -1,5 +1,5 @@
 <template>
-  <main id="nav">
+  <main id="nav" :class="{ 'navbar--hidden': !showNavbar }">
     <Popover class="fixed top-0 left-0 right-0 z-10 text-clrSecondary">
       <div class="px-4 mx-auto max-w-7xl sm:px-6">
         <div
@@ -26,21 +26,25 @@
           <PopoverGroup as="nav" class="hidden space-x-10 md:flex">
             <router-link
               :to="{ name: 'about' }"
+              :class="{ active: currentRoute === 'about' }"
               class="text-base font-medium hover:text-clrAccent"
               >About</router-link
             >
             <router-link
               :to="{ name: 'projects' }"
+              :class="{ active: currentRoute === 'projects' }"
               class="text-base font-medium hover:text-clrAccent"
               >Projects</router-link
             >
             <router-link
               :to="{ name: 'contact' }"
+              :class="{ active: currentRoute === 'contact' }"
               class="text-base font-medium hover:text-clrAccent"
               >Contact</router-link
             >
             <router-link
               :to="{ name: 'blog_posts' }"
+              :class="{ active: currentRoute === 'blog_posts' }"
               class="text-base font-medium hover:text-clrAccent"
               >Blog</router-link
             >
@@ -82,21 +86,25 @@
               <div class="flex flex-col text-clrSecondary">
                 <router-link
                   :to="{ name: 'about' }"
+                  :class="{ active: currentRoute === 'about' }"
                   class="text-base font-medium hover:text-clrAccent"
                   >About</router-link
                 >
                 <router-link
                   :to="{ name: 'projects' }"
+                  :class="{ active: currentRoute === 'projects' }"
                   class="text-base font-medium hover:text-clrAccent"
                   >Projects</router-link
                 >
                 <router-link
                   :to="{ name: 'contact' }"
+                  :class="{ active: currentRoute === 'contact' }"
                   class="text-base font-medium hover:text-clrAccent"
                   >Contact</router-link
                 >
                 <router-link
                   :to="{ name: 'blog_posts' }"
+                  :class="{ active: currentRoute === 'blog_posts' }"
                   class="text-base font-medium hover:text-clrAccent"
                   >Blog</router-link
                 >
@@ -160,15 +168,28 @@ import {
   // Squares2X2Icon,
   XMarkIcon,
 } from "@heroicons/vue/24/outline";
+import { useRoute, useRouter } from "vue-router";
+import { computed } from "vue";
 // import router from "../router";
 // import AppButtonEmpty from "./AppButtonEmpty.vue";
 // import AppButtonFull from "./AppButtonFull.vue";
 
-const scroll = (id) => {
-  document.getElementById(id).scrollIntoView({
-    behavior: "smooth",
-  });
-};
+// const scroll = (id) => {
+//   document.getElementById(id).scrollIntoView({
+//     behavior: "smooth",
+//   });
+// };
+
+const route = useRoute();
+// const router = useRouter();
+
+const currentRoute = computed(() => {
+  return route.name;
+});
+
+// const nameRoute = computed(() => {
+//   return route.name;
+// });
 
 // const scrollPageTo = (navEl) => {
 //   console.log(`#${navEl}`);
@@ -181,5 +202,23 @@ const scroll = (id) => {
 <style scoped>
 .sticky {
   background-color: red;
+}
+
+.active {
+  color: var(--clrAccent);
+}
+
+.navbar {
+  height: 60px;
+  width: 100vw;
+  background: hsl(200, 50%, 50%);
+  position: fixed;
+  box-shadow: 0 2px 15px rgba(71, 120, 120, 0.5);
+  transform: translate3d(0, 0, 0);
+  transition: 0.1s all ease-out;
+}
+.navbar.navbar--hidden {
+  box-shadow: none;
+  transform: translate3d(0, -100%, 0);
 }
 </style>
