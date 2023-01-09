@@ -5,7 +5,7 @@
     <div>
       <!-- class="relative flex flex-col min-h-screen pt-24 overflow-hidden md:justify-center"
         class="flex flex-col justify-between pt-20 pb-32 mx-auto align-bottom sm:pt-48 sm:pb-40" -->
-      <div class="flex flex-col gap-12 justify-evenly">
+      <div class="flex flex-col gap-8 justify-evenly">
         <h1
           class="text-3xl font-bold tracking-tight text-center md:text-4xl lg:text-6xl"
         >
