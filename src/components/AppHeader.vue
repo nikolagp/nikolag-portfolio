@@ -1,10 +1,11 @@
 <template>
-  <main>
-    <div
-      class="relative flex flex-col justify-center min-h-screen overflow-hidden"
-    >
-      <!-- class="flex flex-col justify-between pt-20 pb-32 mx-auto align-bottom sm:pt-48 sm:pb-40" -->
-      <div class="flex flex-col gap-8 justify-evenly">
+  <main
+    class="relative flex flex-col min-h-screen overflow-hidden p-top-30 md:justify-center"
+  >
+    <div>
+      <!-- class="relative flex flex-col min-h-screen pt-24 overflow-hidden md:justify-center"
+        class="flex flex-col justify-between pt-20 pb-32 mx-auto align-bottom sm:pt-48 sm:pb-40" -->
+      <div class="flex flex-col gap-12 justify-evenly">
         <h1
           class="text-3xl font-bold tracking-tight text-center md:text-4xl lg:text-6xl"
         >
@@ -29,7 +30,7 @@
         <div
           class="flex justify-center mt-8 gap-x-4"
           data-aos="zoom-in-up"
-          data-aos-delay="2000"
+          data-aos-delay="1000"
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
         >
@@ -84,3 +85,9 @@ const url =
 
 // const mobileMenuOpen = ref(false);
 </script>
+
+<style>
+.p-top-30 {
+  padding-top: 50%;
+}
+</style>

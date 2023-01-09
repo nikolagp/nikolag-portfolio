@@ -28,6 +28,6 @@ import AppFooter from "./components/AppFooter.vue";
 }
 
 section {
-  padding: 10% 6%;
+  padding: 15% 6%;
 }
 </style>

@@ -64,7 +64,7 @@
             </div>
           </Transition>
         </div>
-        <div class="w-full px-20 md:px-20 md:w-1/2">
+        <div class="w-full md:w-1/2">
           <img
             data-aos="fade-down"
             data-aos-offset="0"
@@ -73,7 +73,7 @@
             data-aos-mirror="true"
             data-aos-once="false"
             data-aos-anchor-placement="top-center"
-            class="rounded-md md:w-full lazy"
+            class="px-20 rounded-md md:w-full lazy"
             src="/nikola_profile.jpg"
             alt="Nikola G. Profile Photo"
           />
