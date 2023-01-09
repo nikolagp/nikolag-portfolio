@@ -24,4 +24,8 @@ import AppFooter from "./components/AppFooter.vue";
 .fade-leave-to {
   opacity: 0;
 }
+
+section {
+  padding: 6rem 8%;
+}
 </style>

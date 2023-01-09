@@ -1,5 +1,5 @@
 <template>
-  <div class="px-6 md:px-0">
+  <div class="overflow-hidden">
     <AppHeader />
     <AppAbout />
     <AppProjects />

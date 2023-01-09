@@ -1,11 +1,11 @@
 <template>
-  <section id="about" class="overflow-hidden text-clrSecondary">
-    <div class="mx-auto max-w-7xl">
-      <h2 class="text-2xl font-bold text-center text-clrSecondary md:text-left">
+  <section id="about" class="mt-10 text-clrSecondary sm:py-32 lg:py-30">
+    <div class="px-6 mx-auto my-24 max-w-7xl lg:px-8">
+      <h2 class="text-4xl font-bold text-left text-clrSecondary md:text-left">
         About
       </h2>
       <div
-        class="flex flex-col-reverse gap-5 text-center md:text-left md:flex-row"
+        class="flex flex-col-reverse gap-5 py-10 text-center md:text-left md:flex-row"
       >
         <div
           data-aos="fade-up"
@@ -13,7 +13,8 @@
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
-          data-aos-once="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
           class="w-full md:w-1/2"
         >
           <p class="max-w-2xl mx-auto leading-8 text-clrSecondary">
@@ -62,7 +63,7 @@
             </div>
           </Transition>
         </div>
-        <div class="w-full px-20 md:px-20 md:w-1/2">
+        <div class="w-full px-10 md:px-20 md:w-1/2">
           <img
             data-aos="fade-down"
             data-aos-offset="0"

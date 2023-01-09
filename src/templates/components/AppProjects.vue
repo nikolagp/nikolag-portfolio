@@ -1,8 +1,12 @@
 <template>
-  <section class="mx-auto overflow-x-hidden align-middle max-w-7xl">
+  <section
+    class="px-4 mx-auto mt-10 align-middle sm:py-32 lg:py-30 max-w-7xl sm:px-6 lg:px-8 page"
+  >
     <!-- Project title and list -->
-    <div class="max-w-2xl mx-auto lg:max-w-none hover:border-b-2-clrAccent">
-      <h2 class="text-2xl font-bold text-center text-clrSecondary md:text-left">
+    <div
+      class="max-w-2xl mx-auto my-24 sm:py-24 lg:max-w-none hover:border-b-2-clrAccent lg:py-32"
+    >
+      <h2 class="text-4xl font-bold text-clrSecondary md:text-left">
         Projects
       </h2>
       <div class="flex flex-col justify-center md:justify-between md:flex-row">
@@ -15,7 +19,7 @@
             data-aos-mirror="true"
             data-aos-once="false"
             data-aos-anchor-placement="top-center"
-            class="w-auto text-center md:text-left"
+            class="py-10 text-center md:text-left"
           >
             <li
               class="py-2 cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
@@ -56,12 +60,13 @@
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
           data-aos-once="false"
-          class="cursor-pointer md:w-3/4"
+          data-aos-anchor-placement="top-center"
+          class="px-6 cursor-pointer md:w-3/4"
         >
           <!-- VueJS -->
           <div
             v-if="layout === 'vuejs'"
-            class="space-y-6 duration-300 ease-in active lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
+            class="mt-6 space-y-12 duration-300 ease-in active lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
           >
             <div
               v-for="project in vuejs"
@@ -82,7 +87,7 @@
 
           <div
             v-if="layout === 'vanillajs'"
-            class="space-y-6 active lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
+            class="mt-6 space-y-12 active lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
           >
             <div
               v-for="project in vanillajs"
@@ -103,7 +108,7 @@
 
           <div
             v-if="layout === 'wordpress'"
-            class="space-y-6 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
+            class="mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
           >
             <div
               v-for="project in wordpress"
@@ -124,7 +129,7 @@
 
           <div
             v-if="layout === 'htmlcss'"
-            class="space-y-6 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
+            class="mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
           >
             <div
               v-for="project in htmlcss"

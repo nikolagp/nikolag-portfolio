@@ -1,10 +1,10 @@
 <template>
-  <section class="h-screen overflow-hidden text-clrSecondary" id="contact">
-    <div class="mx-auto max-w-7xl">
-      <h2 class="text-2xl font-bold text-center text-clrSecondary md:text-left">
-        Contact / <span class="underline">Hire me</span>
+  <section class="px-6 text-clrSecondary sm:py-32 lg:py-30" id="contact">
+    <div class="py-6 mx-auto my-24 max-w-7xl">
+      <h2 class="mb-12 text-4xl font-bold md:px-8">
+        Contact / <span class="underline">Hire</span>
       </h2>
-      <div class="flex flex-col w-full md:flex-row">
+      <div class="flex flex-col mx-auto sm:px-3 md:flex-row">
         <div
           class="mb-6 md:w-1/2"
           data-aos="fade-left"
@@ -12,7 +12,7 @@
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
-          data-aos-once="true"
+          data-aos-once="false"
           data-aos-anchor-placement="top-center"
         >
           <form>
@@ -20,7 +20,7 @@
               <input
                 type="email"
                 email="email"
-                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-clrAccent focus:outline-none"
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput8"
                 placeholder="Email"
               />
@@ -30,7 +30,7 @@
               <input
                 type="text"
                 subject="subject"
-                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-clrAccent focus:outline-none"
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleInput7"
                 placeholder="Subject"
               />
@@ -39,9 +39,9 @@
             <div class="mb-6 form-group">
               <textarea
                 name="message"
-                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-clrAccent focus:outline-none"
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="exampleFormControlTextarea13"
-                rows="5"
+                rows="3"
                 placeholder="Message"
               ></textarea>
             </div>

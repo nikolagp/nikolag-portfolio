@@ -9,7 +9,7 @@
         >
           <div class="flex justify-start lg:w-0 lg:flex-1">
             <router-link :to="{ name: 'home' }">
-              <!-- <span class="sr-only">Your Company</span> -->
+              <span class="sr-only">Your Company</span>
               <img
                 class="w-auto h-8 sm:h-10"
                 src="/ngdev.ico"
@@ -71,13 +71,7 @@
             <div class="px-5 pt-5 pb-6">
               <div class="flex items-center justify-between">
                 <div>
-                  <router-link :to="{ name: 'home' }">
-                    <img
-                      class="w-auto h-8"
-                      src="/ngdev.ico"
-                      alt="Your Company"
-                    />
-                  </router-link>
+                  <img class="w-auto h-8" src="/ngdev.ico" alt="Your Company" />
                 </div>
                 <div class="-mr-2">
                   <PopoverButton
