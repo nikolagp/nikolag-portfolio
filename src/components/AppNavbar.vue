@@ -6,14 +6,7 @@
       <div class="px-4 mx-auto max-w-7xl sm:px-6">
         <div class="flex items-center justify-between py-6 md:space-x-10">
           <div class="flex justify-start lg:w-0 lg:flex-1">
-            <router-link :to="{ name: 'home' }">
-              <!-- <span class="sr-only">Your Company</span> -->
-              <img
-                class="w-auto h-8 sm:h-10"
-                src="/ngdev.ico"
-                alt="NG Development Logo"
-              />
-            </router-link>
+            <img class="w-auto h-8 sm:h-8" src="/ngdev.ico" alt="NG Logo" />
           </div>
           <div class="-my-2 -mr-2 md:hidden">
             <PopoverButton
