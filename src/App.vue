@@ -1,7 +1,9 @@
 <template v-cloak>
   <div>
     <AppNavbar />
-    <router-view />
+    <div class="min-h-screen pt-20">
+      <router-view />
+    </div>
     <AppFooter />
   </div>
 </template>
@@ -26,6 +28,6 @@ import AppFooter from "./components/AppFooter.vue";
 }
 
 section {
-  padding: 6rem 8%;
+  padding: 6%;
 }
 </style>

@@ -1,7 +1,12 @@
 <template>
-  <section class="h-screen overflow-hidden text-clrSecondary" id="contact">
+  <section
+    class="py-20 overflow-hidden text-clrSecondary md:h-screen"
+    id="contact"
+  >
     <div class="mx-auto max-w-7xl">
-      <h2 class="text-2xl font-bold text-center text-clrSecondary md:text-left">
+      <h2
+        class="text-3xl font-bold text-center text-clrSecondary md:text-left md:text-4xl"
+      >
         Contact / <span class="underline">Hire me</span>
       </h2>
       <div class="flex flex-col w-full md:flex-row">
@@ -15,7 +20,7 @@
           data-aos-once="true"
           data-aos-anchor-placement="top-center"
         >
-          <form>
+          <form class="m-0">
             <div class="mb-6 form-group">
               <input
                 type="email"
@@ -108,4 +113,9 @@ const linkedin = "https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/";
 // };
 </script>
 
-<style></style>
+<style>
+/* form {
+  max-width: 100%;
+
+} */
+</style>

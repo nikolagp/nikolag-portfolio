@@ -2,6 +2,7 @@
   <footer
     class="relative p-4 text-center border-t shadow border-clrSecondary md:pd-6"
   >
+    <!--  -->
     <span class="text-sm text-gray-500">
       <!-- <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. -->
       Made with love using VueJS and Tailwind

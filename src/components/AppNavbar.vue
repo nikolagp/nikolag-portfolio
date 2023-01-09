@@ -22,7 +22,7 @@
               class="inline-flex items-center justify-center p-2 rounded-md text-clrSecondary focus:outline-none md:hidden"
             >
               <span class="sr-only">Open menu</span>
-              <Bars3Icon class="w-6 h-6" aria-hidden="true" />
+              <Bars3Icon class="w-10 h-10" aria-hidden="true" />
             </PopoverButton>
           </div>
           <PopoverGroup as="nav" class="hidden space-x-10 md:flex">
@@ -75,7 +75,7 @@
                     <img
                       class="w-auto h-8"
                       src="/ngdev.ico"
-                      alt="Your Company"
+                      alt="Nikola G. Petrovski"
                     />
                   </router-link>
                 </div>
@@ -198,7 +198,7 @@ onUnmounted(() => {
   color: var(--clrAccent);
 }
 
-.navbar {
+/* .navbar {
   height: 60px;
   width: 100vw;
   background: hsl(200, 50%, 50%);
@@ -210,5 +210,5 @@ onUnmounted(() => {
 .navbar.navbar--hidden {
   box-shadow: none;
   transform: translate3d(0, -100%, 0);
-}
+} */
 </style>

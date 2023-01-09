@@ -1,10 +1,12 @@
 <template>
-  <section class="mx-auto overflow-x-hidden align-middle max-w-7xl">
-    <!-- Project title and list -->
-    <div class="max-w-2xl mx-auto lg:max-w-none hover:border-b-2-clrAccent">
-      <h2 class="text-2xl font-bold text-center text-clrSecondary md:text-left">
+  <section id="about" class="overflow-hidden text-clrSecondary">
+    <div class="mx-auto max-w-7xl">
+      <h2
+        class="text-3xl font-bold text-center text-clrSecondary md:text-left md:text-4xl"
+      >
         Projects
       </h2>
+
       <div class="flex flex-col justify-center md:justify-between md:flex-row">
         <div class="flex flex-col md:w-1/4 text-clrSecondary">
           <ul
@@ -14,7 +16,6 @@
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"
             data-aos-once="false"
-            data-aos-anchor-placement="top-center"
             class="w-auto text-center md:text-left"
           >
             <li
