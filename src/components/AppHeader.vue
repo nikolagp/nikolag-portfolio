@@ -1,6 +1,6 @@
 <template>
   <main
-    class="relative flex flex-col min-h-screen overflow-hidden p-top-30 md:justify-center"
+    class="relative flex flex-col min-h-screen pb-10 overflow-hidden p-top-30 md:justify-center"
   >
     <div>
       <!-- class="relative flex flex-col min-h-screen pt-24 overflow-hidden md:justify-center"
