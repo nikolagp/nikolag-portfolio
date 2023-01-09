@@ -64,19 +64,21 @@
             </div>
           </Transition>
         </div>
-        <div class="w-full md:w-1/2">
-          <img
-            data-aos="fade-down"
-            data-aos-offset="0"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="false"
-            data-aos-anchor-placement="top-center"
-            class="px-20 rounded-md md:w-full lazy"
-            src="/nikola_profile.jpg"
-            alt="Nikola G. Profile Photo"
-          />
+        <div>
+          <div class="w-full px-10 md:w-1/2">
+            <img
+              data-aos="fade-down"
+              data-aos-offset="0"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top-center"
+              class="rounded-md md:w-full lazy"
+              src="/nikola_profile.jpg"
+              alt="Nikola G. Profile Photo"
+            />
+          </div>
           <p
             class="mt-2 text-lg leading-8 sm:text-center text-clrSecondaryLight"
           >
