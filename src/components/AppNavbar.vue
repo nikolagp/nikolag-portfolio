@@ -4,9 +4,7 @@
       class="fixed top-0 left-0 right-0 z-10 text-clrSecondary bg-clrPrimaryLight"
     >
       <div class="px-4 mx-auto max-w-7xl sm:px-6">
-        <div
-          class="flex items-center justify-between py-6 md:justify-start md:space-x-10"
-        >
+        <div class="flex items-center justify-between py-6 md:space-x-10">
           <div class="flex justify-start lg:w-0 lg:flex-1">
             <router-link :to="{ name: 'home' }">
               <!-- <span class="sr-only">Your Company</span> -->
@@ -22,7 +20,7 @@
               class="inline-flex items-center justify-center p-2 rounded-md text-clrSecondary focus:outline-none md:hidden"
             >
               <span class="sr-only">Open menu</span>
-              <Bars3Icon class="w-10 h-10" aria-hidden="true" />
+              <Bars3Icon class="w-8 h-8" aria-hidden="true" />
             </PopoverButton>
           </div>
           <PopoverGroup as="nav" class="hidden space-x-10 md:flex">
@@ -75,7 +73,7 @@
                     <img
                       class="w-auto h-8"
                       src="/ngdev.ico"
-                      alt="Nikola G. Petrovski"
+                      alt="N.G. Development"
                     />
                   </router-link>
                 </div>
@@ -84,40 +82,41 @@
                     class="inline-flex items-center justify-center p-2 rounded-md text-clrAccent hover:text-clrSecondary focus:outline-none"
                   >
                     <span class="sr-only">Close menu</span>
-                    <XMarkIcon class="w-6 h-6" aria-hidden="true" />
+                    <XMarkIcon class="w-8 h-8" aria-hidden="true" />
                   </PopoverButton>
                 </div>
               </div>
               <div class="flex-col mt-6 text-clrSecondary"></div>
             </div>
-            <div class="px-5 py-6 space-y-6">
-              <div class="flex flex-col text-clrSecondary">
+            <div class="px-5 py-6 space-y-6 text-2xl">
+              <div class="flex flex-col text-center text-clrSecondary">
                 <router-link
                   :to="{ name: 'about' }"
                   :class="{ active: currentRoute === 'about' }"
-                  class="text-base font-medium hover:text-clrAccent"
+                  class="hover:text-clrAccent"
                   >About</router-link
                 >
                 <router-link
                   :to="{ name: 'projects' }"
                   :class="{ active: currentRoute === 'projects' }"
-                  class="text-base font-medium hover:text-clrAccent"
+                  class="hover:text-clrAccent"
                   >Projects</router-link
                 >
                 <router-link
                   :to="{ name: 'contact' }"
                   :class="{ active: currentRoute === 'contact' }"
-                  class="text-base font-medium hover:text-clrAccent"
+                  class="hover:text-clrAccent"
                   >Contact</router-link
                 >
                 <router-link
                   :to="{ name: 'blog_posts' }"
                   :class="{ active: currentRoute === 'blog_posts' }"
-                  class="text-base font-medium hover:text-clrAccent"
+                  class="hover:text-clrAccent"
                   >Blog</router-link
                 >
+
                 <div
-                  class="flex justify-center gap-5 mt-10 align-baseline sm:hidden md:gap-20 md:w-1/2"
+                  class="flex justify-center gap-5 py-4 mt-10 align-baseline md:gap-20 md:w-1/2"
                 >
                   <a :href="github" target="_blank"
                     ><i

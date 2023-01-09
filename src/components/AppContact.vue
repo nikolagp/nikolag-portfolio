@@ -1,6 +1,6 @@
 <template>
   <section
-    class="py-20 overflow-hidden text-clrSecondary md:h-screen"
+    class="py-20 overflow-hidden text-clrSecondary md:min-h-screen"
     id="contact"
   >
     <div class="mx-auto max-w-7xl">

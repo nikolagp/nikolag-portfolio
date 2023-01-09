@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <main>
     <div
-      class="relative flex flex-col justify-center py-20 overflow-hidden lg:h-screen"
+      class="relative flex flex-col justify-center min-h-screen overflow-hidden"
     >
       <!-- class="flex flex-col justify-between pt-20 pb-32 mx-auto align-bottom sm:pt-48 sm:pb-40" -->
       <div class="flex flex-col gap-8 justify-evenly">
@@ -62,7 +62,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </main>
 </template>
 
 <script setup>
