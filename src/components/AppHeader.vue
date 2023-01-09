@@ -88,6 +88,6 @@ const url =
 
 <style>
 .p-top-30 {
-  padding-top: 50%;
+  padding-top: 30%;
 }
 </style>
