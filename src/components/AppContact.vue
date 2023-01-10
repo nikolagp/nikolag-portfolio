@@ -20,7 +20,7 @@
           data-aos-once="true"
           data-aos-anchor-placement="top-center"
         >
-          <form class="m-0">
+          <form class="m-0" @submit.prevent="handleSubmit">
             <div class="mb-6 form-group">
               <input
                 type="email"
@@ -29,6 +29,7 @@
                 id="exampleInput8"
                 placeholder="Email"
                 name="email"
+                v-model="email"
               />
             </div>
 
@@ -40,6 +41,7 @@
                 id="exampleInput7"
                 placeholder="Subject"
                 name="subject"
+                v-model="subject"
               />
             </div>
 
@@ -50,11 +52,13 @@
                 rows="5"
                 placeholder="Message"
                 name="message"
+                v-model="message"
               ></textarea>
             </div>
             <button
               type="submit"
-              class="w-full px-6 py-2.5 bg-clrAccent text-clrSecondary font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-clrAccentLight hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-clrAccent active:shadow-lg transition duration-150 ease-in-out"
+              class="disabled:bg-white w-full px-6 py-2.5 bg-clrAccent text-clrSecondary font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-clrAccentLight hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-clrAccent active:shadow-lg transition duration-150 ease-in-out"
+              :disabled="!email || !message || !subject ? true : false"
             >
               Send
             </button>
@@ -62,7 +66,7 @@
         </div>
         <div class="md:w-1/2">
           <h3 class="text-center">Or you can follow me here</h3>
-          <!-- <div
+          <div
             data-aos="fade-right"
             data-aos-offset="0"
             data-aos-duration="1000"
@@ -86,7 +90,7 @@
                 class="text-4xl cursor-pointer text-clrSecondary fa-brands fa-twitter hover:text-clrAccent"
               ></i
             ></a>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -94,38 +98,31 @@
 </template>
 
 <script setup>
-// import { db } from "@/firebase/firebaseConfig.js";
+import { ref, reactive } from "vue";
+import { db } from "@/firebase/firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
 
 const twitter = "https://twitter.com/amagi_dev";
 const github = "https://github.com/nikolagp";
 const linkedin = "https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/";
 
-// const email = ref("Nikola");
-// const subject = ref("");
-// const message = ref("");
+const email = ref("");
+const subject = ref("");
+const message = ref("");
 
-// import * as db from "../firebase/firebaseConfig";
-// import { db } from "../firebase/firebaseConfig";
+const contactEntries = ref([]);
 
-// export default {
-//   data() {
-//     return {
-//       subject: "",
-//       email: "",
-//       message: "",
-//     };
-//   },
-//   methods: {
-//     handleSubmit() {
-//       let userMessage = {
-//         name: this.subject,
-//         email: this.email,
-//         message: this.message,
-//       };
-//       db.collection("userMessages").add(userMessage);
-//     },
-//   },
-// };
+const handleSubmit = () => {
+  addDoc(collection(db, "contact-form"), {
+    email: email.value,
+    subject: subject.value,
+    message: message.value,
+  });
+
+  email.value = "";
+  subject.value = "";
+  message.value = "";
+};
 </script>
 
 <style>

@@ -7,7 +7,7 @@
         <div class="flex items-center justify-between py-6 md:space-x-10">
           <div class="flex justify-start lg:w-0 lg:flex-1">
             <router-link :to="{ name: 'home' }">
-              <img class="w-auto h-8 sm:h-8" src="/ngdev.ico" alt="NG Logo" />
+              <img class="w-auto h-10 sm:h-10" src="/ngdev.ico" alt="NG Logo" />
             </router-link>
           </div>
           <div class="-my-2 -mr-2 md:hidden">
