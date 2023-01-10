@@ -28,7 +28,7 @@
                 class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-clrAccent focus:outline-none"
                 id="exampleInput8"
                 placeholder="Email"
-                v-model="email"
+                name="email"
               />
             </div>
 
@@ -39,25 +39,24 @@
                 class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-clrAccent focus:outline-none"
                 id="exampleInput7"
                 placeholder="Subject"
-                v-model="subject"
+                name="subject"
               />
             </div>
 
             <div class="mb-6 form-group">
               <textarea
-                name="message"
                 class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-clrAccent focus:outline-none"
                 id="exampleFormControlTextarea13"
                 rows="5"
                 placeholder="Message"
-                v-model="message"
+                name="message"
               ></textarea>
             </div>
             <button
               type="submit"
               class="w-full px-6 py-2.5 bg-clrAccent text-clrSecondary font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-clrAccentLight hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-clrAccent active:shadow-lg transition duration-150 ease-in-out"
             >
-              Send
+              Send Netlify
             </button>
           </form>
         </div>

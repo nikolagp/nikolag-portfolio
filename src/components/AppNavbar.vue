@@ -163,7 +163,10 @@ let previousScrollPosition = 0;
 const handleScroll = () => {
   const currentScrollPosition = window.scrollY;
 
-  if (currentScrollPosition < previousScrollPosition) {
+  if (
+    currentScrollPosition < previousScrollPosition ||
+    currentScrollPosition == previousScrollPosition
+  ) {
     showNavbar.value = true;
   } else {
     showNavbar.value = false;
