@@ -9,18 +9,36 @@
       >
         Contact / <span class="underline">Hire me</span>
       </h2>
+
       <div class="flex flex-col w-full md:flex-row">
-        <div
-          class="mb-6 md:w-1/2"
-          data-aos="fade-left"
-          data-aos-offset="0"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-          data-aos-anchor-placement="top-center"
-        >
-          <form class="m-0" @submit.prevent="handleSubmit">
+        <div class="mb-6 md:w-1/2">
+          <div
+            v-if="success"
+            class="max-w-md py-2 mb-6 text-center rounded-sm bg-clrSecondary form-group"
+            data-aos="fade-down"
+          >
+            <p class="mb-4 font-medium text-clrAccent">
+              Thank you for your message!
+            </p>
+            <button
+              @click.prevent="success = false"
+              class="font-normal text-clrPrimary hover:text-clrAccent"
+            >
+              Back to the form
+            </button>
+          </div>
+          <form
+            v-if="!success"
+            class="m-0"
+            @submit.prevent="handleSubmit"
+            data-aos="fade-left"
+            data-aos-offset="0"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-center"
+          >
             <div class="mb-6 form-group">
               <input
                 type="email"
@@ -63,9 +81,6 @@
               Send
             </button>
           </form>
-          <span class="text-clrAccent" v-if="success"
-            >Thank you for your message!</span
-          >
         </div>
         <div class="md:w-1/2">
           <h3 class="text-center">Or you can follow me here</h3>
@@ -88,7 +103,7 @@
                 class="text-4xl cursor-pointer text-clrSecondary fa-brands fa-linkedin hover:text-clrAccent"
               ></i
             ></a>
-            <a :href="twitter.value" target="_blank"
+            <a :href="twitter" target="_blank"
               ><i
                 class="text-4xl cursor-pointer text-clrSecondary fa-brands fa-twitter hover:text-clrAccent"
               ></i
@@ -109,7 +124,7 @@ const twitter = "https://twitter.com/amagi_dev";
 const github = "https://github.com/nikolagp";
 const linkedin = "https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/";
 
-const success = ref(true);
+const success = ref(false);
 
 const email = ref("");
 const subject = ref("");
@@ -117,7 +132,7 @@ const message = ref("");
 
 const handleSubmit = () => {
   addDoc(collection(db, "contact-form"), {
-    datePosted: new Date().toISOString().slice(0, 16).split("T").join(" "),
+    date: new Date().toISOString().slice(0, 16).split("T").join(" "),
     email: email.value,
     subject: subject.value,
     message: message.value,
@@ -126,13 +141,8 @@ const handleSubmit = () => {
   email.value = "";
   subject.value = "";
   message.value = "";
-  // success.value = true;
+  success.value = true;
 };
 </script>
 
-<style>
-/* form {
-  max-width: 100%;
-
-} */
-</style>
+<style></style>
