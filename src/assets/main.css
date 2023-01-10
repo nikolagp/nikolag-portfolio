@@ -44,8 +44,8 @@ h2 {
 p {
   color: var(--clrSecondary);
   font-weight: 300;
-  font-size: 1.125rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 [data-aos="custom-fade-up"] {

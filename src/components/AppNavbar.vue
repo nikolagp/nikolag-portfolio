@@ -57,19 +57,25 @@
         leave-to-class="scale-95 opacity-0"
       >
         <PopoverPanel
-          focus
           class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform"
         >
           <div class="rounded-lg shadow-lg bg-clrPrimary divide-gray-50">
             <div class="px-5 pt-5 pb-6">
               <div class="flex items-center justify-between">
-                <div>
-                  <img
-                    class="w-auto h-8"
-                    src="/ngdev.ico"
-                    alt="N.G. Development"
-                  />
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                  <router-link :to="{ name: 'home' }">
+                    <img
+                      class="w-auto h-10 sm:h-10"
+                      src="/ngdev.ico"
+                      alt="NG Logo"
+                    />
+                  </router-link>
                 </div>
+                <!-- <RouterLink :to="{ name: 'home' }">
+                  <div>
+                    <img class="w-auto h-8" src="/ngdev.ico" />
+                  </div>
+                </RouterLink> -->
                 <div class="-mr-2">
                   <PopoverButton
                     class="inline-flex items-center justify-center p-2 rounded-md text-clrAccent hover:text-clrSecondary focus:outline-none"
@@ -79,9 +85,9 @@
                   </PopoverButton>
                 </div>
               </div>
-              <div class="flex-col mt-6 text-clrSecondary"></div>
+              <!-- <div class="flex-col mt-6 text-clrSecondary"></div> -->
             </div>
-            <div class="px-5 py-6 space-y-6 text-2xl">
+            <div class="px-5 space-y-6 text-2xl">
               <div class="flex flex-col text-center text-clrSecondary">
                 <router-link
                   :to="{ name: 'about' }"
