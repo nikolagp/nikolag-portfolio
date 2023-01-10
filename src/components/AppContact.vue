@@ -20,7 +20,7 @@
           data-aos-once="true"
           data-aos-anchor-placement="top-center"
         >
-          <form class="m-0" name="contact" data-netlify="true">
+          <form class="m-0" name="contact-form" data-netlify>
             <div class="mb-6 form-group">
               <input
                 type="email"
