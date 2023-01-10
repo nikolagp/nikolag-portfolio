@@ -57,12 +57,15 @@
             </div>
             <button
               type="submit"
-              class="disabled:bg-white w-full px-6 py-2.5 bg-clrAccent text-clrSecondary font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-clrAccentLight hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-clrAccent active:shadow-lg transition duration-150 ease-in-out"
+              class="disabled:bg-transparent disabled:text-clrAccent disabled:border border-2 border-clrAccent w-full px-6 py-2.5 bg-clrAccent text-clrSecondary font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-clrAccentLight hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-clrAccent active:shadow-lg transition duration-150 ease-in-out"
               :disabled="!email || !message || !subject ? true : false"
             >
               Send
             </button>
           </form>
+          <span class="text-clrAccent" v-if="success"
+            >Thank you for your message!</span
+          >
         </div>
         <div class="md:w-1/2">
           <h3 class="text-center">Or you can follow me here</h3>
@@ -98,7 +101,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from "vue";
+import { ref } from "vue";
 import { db } from "@/firebase/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 
@@ -106,14 +109,15 @@ const twitter = "https://twitter.com/amagi_dev";
 const github = "https://github.com/nikolagp";
 const linkedin = "https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/";
 
+const success = ref(true);
+
 const email = ref("");
 const subject = ref("");
 const message = ref("");
 
-const contactEntries = ref([]);
-
 const handleSubmit = () => {
   addDoc(collection(db, "contact-form"), {
+    datePosted: new Date().toISOString().slice(0, 16).split("T").join(" "),
     email: email.value,
     subject: subject.value,
     message: message.value,
@@ -122,6 +126,7 @@ const handleSubmit = () => {
   email.value = "";
   subject.value = "";
   message.value = "";
+  // success.value = true;
 };
 </script>
 

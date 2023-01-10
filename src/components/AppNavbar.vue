@@ -161,7 +161,7 @@ const showNavbar = ref(true);
 let previousScrollPosition = 0;
 
 const handleScroll = () => {
-  const currentScrollPosition = window.scrollY;
+  const currentScrollPosition = window.pageYOffset;
 
   if (
     currentScrollPosition < previousScrollPosition ||
