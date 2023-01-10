@@ -20,7 +20,7 @@
           data-aos-once="true"
           data-aos-anchor-placement="top-center"
         >
-          <form class="m-0" name="contact" data-netlify="true">
+          <form class="m-0">
             <div class="mb-6 form-group">
               <input
                 type="email"
@@ -53,11 +53,10 @@
               ></textarea>
             </div>
             <button
-              @click="handleSubmit(event)"
               type="submit"
               class="w-full px-6 py-2.5 bg-clrAccent text-clrSecondary font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-clrAccentLight hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-clrAccent active:shadow-lg transition duration-150 ease-in-out"
             >
-              Send Netlify
+              Send
             </button>
           </form>
         </div>
@@ -100,21 +99,6 @@
 const twitter = "https://twitter.com/amagi_dev";
 const github = "https://github.com/nikolagp";
 const linkedin = "https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/";
-
-const handleSubmit = (event) => {
-  event.preventDefault();
-
-  const myForm = event.target;
-  const formData = new FormData(myForm);
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => console.log("Form successfully submitted"))
-    .catch((error) => alert(error));
-};
 
 // const email = ref("Nikola");
 // const subject = ref("");
