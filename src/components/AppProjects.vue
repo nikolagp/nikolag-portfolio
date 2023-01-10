@@ -8,7 +8,7 @@
       </h2>
 
       <div class="flex flex-col justify-center md:justify-between md:flex-row">
-        <div class="flex flex-col md:w-1/4 text-clrSecondary">
+        <div class="flex flex-col mb-10 md:w-1/4 text-clrSecondary">
           <ul
             data-aos="fade-right"
             data-aos-offset="0"
@@ -19,33 +19,33 @@
             class="w-auto text-center md:text-left"
           >
             <li
-              class="py-2 cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
+              class="py-2 text-xl cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
               @click="layout = 'vanillajs'"
               :class="{ 'underline text-clrAccent': layout === 'vanillajs' }"
             >
-              Vanilla JavaScript
+              JavaScript
             </li>
             <li
-              class="py-2 cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
+              class="py-2 text-xl cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
               @click="layout = 'vuejs'"
               :class="{ 'underline text-clrAccent': layout === 'vuejs' }"
             >
-              Vue JS & Tailwind
+              Vue JS
             </li>
             <li
-              class="py-2 cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
+              class="py-2 text-xl cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
               @click="layout = 'wordpress'"
               :class="{ 'underline text-clrAccent': layout === 'wordpress' }"
             >
               WordPress
             </li>
-            <li
+            <!-- <li
               class="py-2 cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
               @click="layout = 'htmlcss'"
               :class="{ 'underline text-clrAccent': layout === 'htmlcss' }"
             >
               HTML & CSS
-            </li>
+            </li> -->
           </ul>
         </div>
 
@@ -221,9 +221,9 @@ export default {
         {
           name: "Political Quizz",
           description: "Quizz app buil with Vue 3",
-          imageSrc: "/assets/images/hauzapp.png",
+          imageSrc: "/assets/images/vuejs.webp",
           imageAlt: "Cover of Quizz app buil with Vue 3",
-          href: "#",
+          href: "https://github.com/nikolagp/quizz",
           category: "vuejs",
         },
       ],

@@ -144,5 +144,3 @@ const handleSubmit = () => {
   success.value = true;
 };
 </script>
-
-<style></style>

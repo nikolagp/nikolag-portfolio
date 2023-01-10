@@ -71,11 +71,6 @@
                     />
                   </router-link>
                 </div>
-                <!-- <RouterLink :to="{ name: 'home' }">
-                  <div>
-                    <img class="w-auto h-8" src="/ngdev.ico" />
-                  </div>
-                </RouterLink> -->
                 <div class="-mr-2">
                   <PopoverButton
                     class="inline-flex items-center justify-center p-2 rounded-md text-clrAccent hover:text-clrSecondary focus:outline-none"
@@ -85,7 +80,6 @@
                   </PopoverButton>
                 </div>
               </div>
-              <!-- <div class="flex-col mt-6 text-clrSecondary"></div> -->
             </div>
             <div class="px-5 space-y-6 text-2xl">
               <div class="flex flex-col text-center text-clrSecondary">
@@ -180,18 +174,6 @@ const handleScroll = () => {
 
   showNavbar.value = currentScrollPosition < previousScrollPosition;
   previousScrollPosition = currentScrollPosition;
-
-  // const currentScrollPosition = window.pageYOffset;
-  // if (
-  //   currentScrollPosition < previousScrollPosition ||
-  //   currentScrollPosition == previousScrollPosition
-  // ) {
-  //   showNavbar.value = true;
-  // } else {
-  //   showNavbar.value = false;
-  // }
-
-  // previousScrollPosition = currentScrollPosition;
 };
 
 onMounted(() => {
@@ -204,25 +186,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.sticky {
-  background-color: red;
-}
-
 .active {
   color: var(--clrAccent);
 }
-
-/* .navbar {
-  height: 60px;
-  width: 100vw;
-  background: hsl(200, 50%, 50%);
-  position: fixed;
-  box-shadow: 0 2px 15px rgba(71, 120, 120, 0.5);
-  transform: translate3d(0, 0, 0);
-  transition: 0.1s all ease-out;
-}
-.navbar.navbar--hidden {
-  box-shadow: none;
-  transform: translate3d(0, -100%, 0);
-} */
 </style>

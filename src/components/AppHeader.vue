@@ -3,8 +3,6 @@
     class="relative flex flex-col min-h-screen pb-10 overflow-hidden md:pt-0 p-top-30 md:justify-center"
   >
     <div>
-      <!-- class="relative flex flex-col min-h-screen pt-24 overflow-hidden md:justify-center"
-        class="flex flex-col justify-between pt-20 pb-32 mx-auto align-bottom sm:pt-48 sm:pb-40" -->
       <div class="flex flex-col gap-8 justify-evenly">
         <h1
           class="text-3xl font-bold tracking-tight text-center md:text-4xl lg:text-6xl"
@@ -35,7 +33,7 @@
           data-aos-easing="ease-in-out"
         >
           <AppButtonFull
-            ><a :href="url" target="_blank">Download CV</a></AppButtonFull
+            ><a :href="url" target="_blank">Read the CV</a></AppButtonFull
           >
           <!-- <AppButtonEmpty href="/#contact"> Contact Me </AppButtonEmpty> -->
         </div>
@@ -67,23 +65,9 @@
 </template>
 
 <script setup>
-// import { ref } from "vue";
-// import { Dialog, DialogPanel } from "@headlessui/vue";
-// import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-
 import AppButtonFull from "./AppButtonFull.vue";
 const url =
   "https://drive.google.com/file/d/14IZ4guB9A48_M0PIwsDf9QsyRL9dXyMP/view";
-// import AppButtonEmpty from "./AppButtonEmpty.vue";
-
-// const navigation = [
-//   { name: "Product", href: "#" },
-//   { name: "Features", href: "#" },
-//   { name: "Marketplace", href: "#" },
-//   { name: "Company", href: "#" },
-// ];
-
-// const mobileMenuOpen = ref(false);
 </script>
 
 <style>

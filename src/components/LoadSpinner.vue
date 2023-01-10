@@ -2,10 +2,6 @@
   <div class="spin"></div>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style scoped>
 .spin {
   display: block;

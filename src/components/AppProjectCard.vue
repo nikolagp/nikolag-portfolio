@@ -13,7 +13,6 @@
     </div>
     <h3 class="my-3 text-xl font-semibold text-clrAccent">
       <a :href="href" target="_blank">
-        <!-- <span class="absolute inset-0" /> -->
         {{ name }}
       </a>
     </h3>
@@ -47,5 +46,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

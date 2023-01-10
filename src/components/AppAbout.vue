@@ -97,13 +97,8 @@
 </template>
 
 <script setup>
-// import { motionFadeUp, motionFadeIn } from "./motions";
 import { ref } from "vue";
-import // BoltIcon,
-// DevicePhoneMobileIcon,
-// GlobeAltIcon,
-// ScaleIcon,
-"@heroicons/vue/24/outline";
+import "@heroicons/vue/24/outline";
 
 const readMore = ref(false);
 </script>
