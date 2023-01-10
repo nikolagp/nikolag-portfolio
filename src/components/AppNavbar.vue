@@ -6,7 +6,9 @@
       <div class="px-4 mx-auto max-w-7xl sm:px-6">
         <div class="flex items-center justify-between py-6 md:space-x-10">
           <div class="flex justify-start lg:w-0 lg:flex-1">
-            <img class="w-auto h-8 sm:h-8" src="/ngdev.ico" alt="NG Logo" />
+            <router-link :to="{ name: 'home' }">
+              <img class="w-auto h-8 sm:h-8" src="/ngdev.ico" alt="NG Logo" />
+            </router-link>
           </div>
           <div class="-my-2 -mr-2 md:hidden">
             <PopoverButton
@@ -62,13 +64,11 @@
             <div class="px-5 pt-5 pb-6">
               <div class="flex items-center justify-between">
                 <div>
-                  <router-link :to="{ name: 'home' }">
-                    <img
-                      class="w-auto h-8"
-                      src="/ngdev.ico"
-                      alt="N.G. Development"
-                    />
-                  </router-link>
+                  <img
+                    class="w-auto h-8"
+                    src="/ngdev.ico"
+                    alt="N.G. Development"
+                  />
                 </div>
                 <div class="-mr-2">
                   <PopoverButton

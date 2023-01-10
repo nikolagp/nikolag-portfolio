@@ -20,7 +20,7 @@
           data-aos-once="true"
           data-aos-anchor-placement="top-center"
         >
-          <form class="m-0">
+          <form class="m-0" name="contact" method="POST" data-netlify="true">
             <div class="mb-6 form-group">
               <input
                 type="email"
@@ -28,6 +28,7 @@
                 class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-clrAccent focus:outline-none"
                 id="exampleInput8"
                 placeholder="Email"
+                v-model="email"
               />
             </div>
 
@@ -38,6 +39,7 @@
                 class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-clrAccent focus:outline-none"
                 id="exampleInput7"
                 placeholder="Subject"
+                v-model="subject"
               />
             </div>
 
@@ -48,6 +50,7 @@
                 id="exampleFormControlTextarea13"
                 rows="5"
                 placeholder="Message"
+                v-model="message"
               ></textarea>
             </div>
             <button
@@ -60,7 +63,7 @@
         </div>
         <div class="md:w-1/2">
           <h3 class="text-center">Or you can follow me here</h3>
-          <div
+          <!-- <div
             data-aos="fade-right"
             data-aos-offset="0"
             data-aos-duration="1000"
@@ -79,12 +82,12 @@
                 class="text-4xl cursor-pointer text-clrSecondary fa-brands fa-linkedin hover:text-clrAccent"
               ></i
             ></a>
-            <a :href="twitter" target="_blank"
+            <a :href="twitter.value" target="_blank"
               ><i
                 class="text-4xl cursor-pointer text-clrSecondary fa-brands fa-twitter hover:text-clrAccent"
               ></i
             ></a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -92,24 +95,37 @@
 </template>
 
 <script setup>
-// import { projectFirestore } from "@/firebase/config";
-// import { ref } from "vue";
+// import { db } from "@/firebase/firebaseConfig.js";
+
 const twitter = "https://twitter.com/amagi_dev";
 const github = "https://github.com/nikolagp";
 const linkedin = "https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/";
 
-// const email = ref("");
+// const email = ref("Nikola");
 // const subject = ref("");
 // const message = ref("");
 
-// const handleSubmit = () => {
-//   let userMessage = {
-//     email: email.value,
-//     subject: subject.value,
-//     message: message.value,
-//   };
+// import * as db from "../firebase/firebaseConfig";
+// import { db } from "../firebase/firebaseConfig";
 
-//   projectFirestore.collection("userMessage").add(userMessage);
+// export default {
+//   data() {
+//     return {
+//       subject: "",
+//       email: "",
+//       message: "",
+//     };
+//   },
+//   methods: {
+//     handleSubmit() {
+//       let userMessage = {
+//         name: this.subject,
+//         email: this.email,
+//         message: this.message,
+//       };
+//       db.collection("userMessages").add(userMessage);
+//     },
+//   },
 // };
 </script>
 
