@@ -167,18 +167,31 @@ const showNavbar = ref(true);
 let previousScrollPosition = 0;
 
 const handleScroll = () => {
-  const currentScrollPosition = window.pageYOffset;
+  const currentScrollPosition =
+    window.pageYOffset || document.documentElement.scrollTop;
 
-  if (
-    currentScrollPosition < previousScrollPosition ||
-    currentScrollPosition == previousScrollPosition
-  ) {
-    showNavbar.value = true;
-  } else {
-    showNavbar.value = false;
+  if (Math.abs(currentScrollPosition - previousScrollPosition) < 60) {
+    return;
   }
 
+  if (currentScrollPosition < 0) {
+    return;
+  }
+
+  showNavbar.value = currentScrollPosition < previousScrollPosition;
   previousScrollPosition = currentScrollPosition;
+
+  // const currentScrollPosition = window.pageYOffset;
+  // if (
+  //   currentScrollPosition < previousScrollPosition ||
+  //   currentScrollPosition == previousScrollPosition
+  // ) {
+  //   showNavbar.value = true;
+  // } else {
+  //   showNavbar.value = false;
+  // }
+
+  // previousScrollPosition = currentScrollPosition;
 };
 
 onMounted(() => {
