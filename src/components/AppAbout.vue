@@ -64,8 +64,8 @@
             </div>
           </Transition>
         </div>
-        <div>
-          <div class="w-full px-10 md:w-1/2">
+        <div class="md:w-1/2">
+          <div class="w-full px-10">
             <img
               data-aos="fade-down"
               data-aos-offset="0"
