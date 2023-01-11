@@ -66,7 +66,7 @@
 
 <script setup>
 import AppButtonFull from "./AppButtonFull.vue";
-const url = "/assets/images/nikolagpetrovski_cv.pdf";
+const url = "/assets/ngp-cv.pdf";
 // "https://drive.google.com/file/d/14IZ4guB9A48_M0PIwsDf9QsyRL9dXyMP/view";
 </script>
 
