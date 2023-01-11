@@ -57,6 +57,10 @@ p {
   animation-play-state: running;
 }
 
+::selection {
+  background-color: var(--clrAccentLight);
+}
+
 /* 
   clrPrimary: "rgb(28, 52, 77)",
   clrSecondary: "rgb(249, 249, 246)",
