@@ -84,7 +84,8 @@
         </div>
         <div class="md:w-1/2">
           <h3 class="text-center">Or you can follow me here</h3>
-          <div
+          <SocialLinks />
+          <!-- <div
             data-aos="fade-right"
             data-aos-offset="0"
             data-aos-duration="1000"
@@ -108,7 +109,7 @@
                 class="text-4xl cursor-pointer text-clrSecondary fa-brands fa-twitter hover:text-clrAccent"
               ></i
             ></a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -119,6 +120,7 @@
 import { ref } from "vue";
 import { db } from "@/firebase/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
+import SocialLinks from "./SocialLinks.vue";
 
 const twitter = "https://twitter.com/amagi_dev";
 const github = "https://github.com/nikolagp";

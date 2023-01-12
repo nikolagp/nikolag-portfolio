@@ -21,8 +21,12 @@
           <p class="max-w-2xl mx-auto leading-8 text-clrSecondary">
             Hi, I’m Nikola. Frontend developer - self-taught. Eager to explore
             the nature, my open mind and the new technologies. I'm passionate
-            about philosophy, art and spirituality. My tech stack in short
-            includes: JavaScript, VueJS and WordPress.
+            about philosophy, art and spirituality. I consider myself to be a
+            fast learner, able to grasp new concepts quickly with excellent
+            capacity to remember new information. <br /><strong
+              >My tech stack in short includes: JavaScript, VueJS and
+              WordPress.</strong
+            >
           </p>
           <br />
           <button

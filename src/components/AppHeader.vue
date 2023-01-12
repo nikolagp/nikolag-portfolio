@@ -25,6 +25,7 @@
           >
         </h1>
         <!-- Buttons -->
+
         <div
           class="flex justify-center mt-8 gap-x-4"
           data-aos="zoom-in-up"
@@ -37,8 +38,9 @@
           >
           <!-- <AppButtonEmpty href="/#contact"> Contact Me </AppButtonEmpty> -->
         </div>
+        <SocialLinks class="hidden md:flex" />
         <!-- Link to the blog -->
-        <div class="hidden mt-8 sm:mb-8 md:flex sm:justify-center">
+        <!-- <div class="hidden mt-8 sm:mb-8 md:flex sm:justify-center">
           <div
             class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-clrSecondaryLight hover:bg-clrAccent"
           >
@@ -58,16 +60,16 @@
               >
             </span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </main>
 </template>
 
 <script setup>
+import SocialLinks from "./SocialLinks.vue";
 import AppButtonFull from "./AppButtonFull.vue";
 const url = "/assets/ngp-cv.pdf";
-// "https://drive.google.com/file/d/14IZ4guB9A48_M0PIwsDf9QsyRL9dXyMP/view";
 </script>
 
 <style>
