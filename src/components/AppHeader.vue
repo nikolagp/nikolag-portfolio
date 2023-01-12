@@ -69,7 +69,7 @@
 <script setup>
 import SocialLinks from "./SocialLinks.vue";
 import AppButtonFull from "./AppButtonFull.vue";
-const url = "/assets/ngp-cv.pdf";
+const url = "/ngp-cv.pdf";
 </script>
 
 <style>
