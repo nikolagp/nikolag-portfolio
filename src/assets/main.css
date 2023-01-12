@@ -61,6 +61,13 @@ p {
   background-color: var(--clrAccentLight);
 }
 
+@media (max-width: 576px) {
+  body {
+    background-position: 0px -10px;
+    background-size: 520px;
+  }
+}
+
 /* 
   clrPrimary: "rgb(28, 52, 77)",
   clrSecondary: "rgb(249, 249, 246)",
