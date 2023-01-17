@@ -23,8 +23,8 @@
             the nature, my open mind and the new technologies. I consider myself
             to be a fast learner, able to grasp new concepts quickly with
             excellent capacity to remember new information. <br /><strong
-              >My tech stack in short includes: JavaScript, VueJS and
-              WordPress.</strong
+              >My tech stack in short includes: JavaScript, VueJS, Tailwind,
+              CSS, Firebase and WordPress.</strong
             >
           </p>
           <br />
