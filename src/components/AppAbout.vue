@@ -23,8 +23,8 @@
             the nature, my open mind and the new technologies. I consider myself
             to be a fast learner, able to grasp new concepts quickly with
             excellent capacity to remember new information. <br /><strong
-              >My tech stack in short includes: JavaScript, VueJS, Tailwind,
-              CSS, Firebase and WordPress.</strong
+              >My tech stack in short includes: JavaScript, TypeScript, VueJS,
+              Tailwind, CSS, Firebase and WordPress.</strong
             >
           </p>
           <br />
@@ -100,8 +100,8 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import "@heroicons/vue/24/outline";
+import { ref } from 'vue';
+import '@heroicons/vue/24/outline';
 
 const readMore = ref(false);
 </script>
