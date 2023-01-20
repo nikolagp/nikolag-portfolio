@@ -39,13 +39,13 @@
             >
               WordPress
             </li>
-            <!-- <li
-              class="py-2 cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
-              @click="layout = 'htmlcss'"
-              :class="{ 'underline text-clrAccent': layout === 'htmlcss' }"
+            <li
+              class="py-2 text-xl cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
+              @click="layout = 'typescript'"
+              :class="{ 'underline text-clrAccent': layout === 'typescript' }"
             >
-              HTML & CSS
-            </li> -->
+              TypeScript
+            </li>
           </ul>
         </div>
 
@@ -124,11 +124,11 @@
           <!-- HTML & CSS -->
 
           <div
-            v-if="layout === 'htmlcss'"
+            v-if="layout === 'typescript'"
             class="space-y-6 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
           >
             <div
-              v-for="project in htmlcss"
+              v-for="project in typescript"
               :key="project.name"
               class="relative group"
             >
@@ -148,151 +148,129 @@
 </template>
 
 <script>
-import AppProjectCard from "./AppProjectCard.vue";
+import AppProjectCard from './AppProjectCard.vue';
 
 export default {
-  name: "AppProjects",
+  name: 'AppProjects',
   components: {
     AppProjectCard,
   },
 
   data() {
     return {
-      layout: "vanillajs",
+      layout: 'vanillajs',
 
       vanillajs: [
         {
-          name: "Bankist Application",
+          name: 'Bankist Application',
           description:
-            "Simple bank application for tracking deposits and withdrawals",
-          imageSrc: "/assets/images/bankist_app.png",
-          imageAlt: "Bankist App Dashboard",
-          href: "https://github.com/nikolagp/bankist",
-          category: "vanillajs",
+            'Simple bank application for tracking deposits and withdrawals',
+          imageSrc: '/assets/images/bankist_app.png',
+          imageAlt: 'Bankist App Dashboard',
+          href: 'https://github.com/nikolagp/bankist',
+          category: 'vanillajs',
         },
         {
-          name: "Bankist - Website",
-          description: "Website for bank application",
-          imageSrc: "/assets/images/bankist.png",
-          imageAlt: "Bankist Website",
-          href: "https://github.com/nikolagp/bankist-web",
-          category: "vanillajs",
+          name: 'Bankist - Website',
+          description: 'Website for bank application',
+          imageSrc: '/assets/images/bankist.png',
+          imageAlt: 'Bankist Website',
+          href: 'https://github.com/nikolagp/bankist-web',
+          category: 'vanillajs',
         },
         {
-          name: "Guess My Number",
-          description: "Game: Guess my number",
-          imageSrc: "/assets/images/gmn_game.png",
+          name: 'Guess My Number',
+          description: 'Game: Guess my number',
+          imageSrc: '/assets/images/gmn_game.png',
           imageAlt:
-            "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-          href: "https://github.com/nikolagp/guess-my-number",
-          category: "vanillajs",
+            'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
+          href: 'https://github.com/nikolagp/guess-my-number',
+          category: 'vanillajs',
         },
         {
-          name: "Mapty Application",
-          description: "Map and track your workouts",
-          imageSrc: "/assets/images/mapty.png",
+          name: 'Mapty Application',
+          description: 'Map and track your workouts',
+          imageSrc: '/assets/images/mapty.png',
           imageAlt:
-            "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-          href: "https://github.com/nikolagp/workout-mapp",
-          category: "vanillajs",
+            'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
+          href: 'https://github.com/nikolagp/workout-mapp',
+          category: 'vanillajs',
         },
       ],
       vuejs: [
         {
-          name: "Music Platform",
+          name: 'Music Platform',
           description:
-            "Music platform built with Vue 3, Firebase and TailwindCSS",
-          imageSrc: "/assets/images/hauzapp.png",
+            'Music platform built with Vue 3, Firebase and TailwindCSS',
+          imageSrc: '/assets/images/hauzapp.png',
           imageAlt:
-            "Cover of music platform built with Vue 3, Firebase and TailwindCSS.",
-          href: "https://github.com/nikolagp/music-app-vue",
-          category: "vuejs",
+            'Cover of music platform built with Vue 3, Firebase and TailwindCSS.',
+          href: 'https://github.com/nikolagp/music-app-vue',
+          category: 'vuejs',
         },
         {
-          name: "Portfolio Website",
+          name: 'Portfolio Website',
           description:
-            "Portfolio website built with Vue 3, Vite and TailwindCSS",
-          imageSrc: "/assets/images/nikolagportfolio.png",
+            'Portfolio website built with Vue 3, Vite and TailwindCSS',
+          imageSrc: '/assets/images/nikolagportfolio.png',
           imageAlt:
-            "Cover of Portfolio website built with Vue 3, Vite and TailwindCSS",
-          href: "#",
-          category: "vuejs",
+            'Cover of Portfolio website built with Vue 3, Vite and TailwindCSS',
+          href: '#',
+          category: 'vuejs',
         },
         {
-          name: "Political Quizz",
-          description: "Quizz app buil with Vue 3",
-          imageSrc: "/assets/images/vuejs.webp",
-          imageAlt: "Cover of Quizz app buil with Vue 3",
-          href: "https://github.com/nikolagp/quizz",
-          category: "vuejs",
+          name: 'Political Quizz',
+          description: 'Quizz app buil with Vue 3',
+          imageSrc: '/assets/images/vuejs.webp',
+          imageAlt: 'Cover of Quizz app buil with Vue 3',
+          href: 'https://github.com/nikolagp/quizz',
+          category: 'vuejs',
         },
       ],
       wordpress: [
         {
-          name: "Liberty In Our Lifetime - Conference (2022)",
-          description: "Website for the conference",
-          imageSrc: "/assets/images/liol.png",
-          imageAlt: "Liberty in ourlifetime Conference 2022.",
-          href: "https://lifetimeliberty.com/",
-          category: "wordpress",
+          name: 'Liberty In Our Lifetime - Conference (2022)',
+          description: 'Website for the conference',
+          imageSrc: '/assets/images/liol.png',
+          imageAlt: 'Liberty in ourlifetime Conference 2022.',
+          href: 'https://lifetimeliberty.com/',
+          category: 'wordpress',
         },
         {
-          name: "Free City Foundation (2022)",
-          description: "Website for the foundation - Free Cities Foundation",
-          imageSrc: "/assets/images/fcf.png",
-          imageAlt: "Cover of the website for the Free Cities FOundation",
-          href: "https://free-cities.org/",
-          category: "wordpress",
+          name: 'Free City Foundation (2022)',
+          description: 'Website for the foundation - Free Cities Foundation',
+          imageSrc: '/assets/images/fcf.png',
+          imageAlt: 'Cover of the website for the Free Cities FOundation',
+          href: 'https://free-cities.org/',
+          category: 'wordpress',
         },
         {
-          name: "Libertania - Center for Contemporary Politics (2020)",
-          description: "Website for non-profit organization Libertania",
-          imageSrc: "/assets/images/libertania.png",
+          name: 'Libertania - Center for Contemporary Politics (2020)',
+          description: 'Website for non-profit organization Libertania',
+          imageSrc: '/assets/images/libertania.png',
           imageAlt:
-            "Cover photo of the website for non-profit organization Libertania",
-          href: "https://libertania.org/",
-          category: "wordpress",
+            'Cover photo of the website for non-profit organization Libertania',
+          href: 'https://libertania.org/',
+          category: 'wordpress',
         },
         {
-          name: "Media Instruction, Resources and Advocacy - MIRA (2020)",
-          description: "Website for non-profit organization MIRA",
-          imageSrc: "/assets/images/mira.png",
+          name: 'Media Instruction, Resources and Advocacy - MIRA (2020)',
+          description: 'Website for non-profit organization MIRA',
+          imageSrc: '/assets/images/mira.png',
           imageAlt:
-            "Cover photo of the website for non-profit organization MIRA",
-          href: "#",
-          category: "wordpress",
+            'Cover photo of the website for non-profit organization MIRA',
+          href: '#',
+          category: 'wordpress',
         },
       ],
-      htmlcss: [
+      typescript: [
         {
-          name: "HTML & CSS 1",
-          description: "Work from home accessories",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg",
-          imageAlt:
-            "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-          href: "#",
-          category: "wordpress",
-        },
-        {
-          name: "HTML & CSS 2",
-          description: "Work from home accessories",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg",
-          imageAlt:
-            "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-          href: "#",
-          category: "wordpress",
-        },
-        {
-          name: "HTML & CSS 3",
-          description: "Work from home accessories",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg",
-          imageAlt:
-            "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-          href: "#",
-          category: "wordpress",
+          name: 'Simple Todo App',
+          description: 'Todo app made with TypeScript, Tailwind and Vite',
+          imageSrc: 'public/assets/images/todo-ts.png',
+          imageAlt: 'Screenshot from Todo-App',
+          href: 'https://github.com/nikolagp/type-script-todo',
+          category: 'typescript',
         },
       ],
     };
