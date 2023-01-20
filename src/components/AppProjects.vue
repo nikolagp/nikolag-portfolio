@@ -267,7 +267,7 @@ export default {
         {
           name: 'Simple Todo App',
           description: 'Todo app made with TypeScript, Tailwind and Vite',
-          imageSrc: 'public/assets/images/todo-ts.png',
+          imageSrc: '/assets/images/todo-ts.png',
           imageAlt: 'Screenshot from Todo-App',
           href: 'https://github.com/nikolagp/type-script-todo',
           category: 'typescript',
