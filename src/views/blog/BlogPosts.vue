@@ -36,6 +36,8 @@
 </template>
 
 <script setup>
+// import { onMounted, onUnmounted, ref, computed } from "vue";
+// import { usePostStore } from "@/stores/index";
 import BlogPostCard from "@/components/BlogPostCard.vue";
 // import getPosts from "@/hooks/getPosts.js";
 

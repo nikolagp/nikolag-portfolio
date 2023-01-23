@@ -14,6 +14,7 @@
         class="object-cover object-center w-full h-full"
       />
     </div>
+    <router-link :to="`/blog/${post._id}`">Read More</router-link>
     <router-link :to="{ name: 'single_post', params: { id: post.id } }">
       <h2
         class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white"
@@ -22,15 +23,15 @@
       </h2>
 
       <p class="mb-4 font-light text-gray-500 dark:text-gray-400">
-        <!-- {{ snipped }} -->
+        {{ post.description }}
       </p>
 
-      <a
+      <!-- <a
         href="#"
         class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
       >
         Read in 4 minutes
-      </a>
+      </a> -->
     </router-link>
   </article>
   <span
@@ -38,10 +39,10 @@
     v-for="tag in post.tags"
     :key="tag"
   >
-    #{{ tag }}</span
+    #{{ post.category }}</span
   >
 </template>
 <script setup>
 import { defineProps } from "vue";
-defineProps(["post"]);
+defineProps({ post: { type: Object, required: true } });
 </script>
