@@ -34,6 +34,13 @@
             </li>
             <li
               class="py-2 text-xl cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
+              @click="layout = 'react'"
+              :class="{ 'underline text-clrAccent': layout === 'react' }"
+            >
+              React
+            </li>
+            <li
+              class="py-2 text-xl cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
               @click="layout = 'wordpress'"
               :class="{ 'underline text-clrAccent': layout === 'wordpress' }"
             >
@@ -121,7 +128,7 @@
             </div>
           </div>
 
-          <!-- HTML & CSS -->
+          <!-- TypeScript -->
 
           <div
             v-if="layout === 'typescript'"
@@ -129,6 +136,27 @@
           >
             <div
               v-for="project in typescript"
+              :key="project.name"
+              class="relative group"
+            >
+              <AppProjectCard
+                :name="project.name"
+                :imageSrc="project.imageSrc"
+                :imageAlt="project.imageAlt"
+                :description="project.description"
+                :href="project.href"
+              />
+            </div>
+          </div>
+
+          <!-- React -->
+
+          <div
+            v-if="layout === 'react'"
+            class="space-y-6 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
+          >
+            <div
+              v-for="project in react"
               :key="project.name"
               class="relative group"
             >
@@ -273,10 +301,18 @@ export default {
           category: 'typescript',
         },
       ],
+      react: [
+        {
+          name: 'Cook Inc. Recipe App',
+          description: 'Cook Inc. app made with React, Tailwind and Vite',
+          imageSrc: '/assets/images/cookinc.png',
+          imageAlt: 'Screenshot from cookinc-App',
+          href: 'https://github.com/nikolagp/cookinc-app',
+          category: 'react',
+        },
+      ],
     };
   },
   methods: {},
 };
 </script>
-
-<style scoped></style>
