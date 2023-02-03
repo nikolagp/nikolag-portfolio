@@ -8,7 +8,9 @@
       </h2>
 
       <div class="flex flex-col justify-center md:justify-between md:flex-row">
-        <div class="flex flex-col mb-10 md:w-1/4 text-clrSecondary">
+        <div
+          class="flex flex-col items-center mb-10 md:items-start md:w-1/4 text-clrSecondary"
+        >
           <ul
             data-aos="fade-right"
             data-aos-offset="0"
@@ -19,37 +21,39 @@
             class="w-auto text-center md:text-left"
           >
             <li
-              class="py-2 text-xl cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
+              class="list-style"
               @click="layout = 'vanillajs'"
-              :class="{ 'underline text-clrAccent': layout === 'vanillajs' }"
+              :class="{
+                'list-style-active': layout === 'vanillajs',
+              }"
             >
               JavaScript
             </li>
             <li
-              class="py-2 text-xl cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
+              class="list-style"
               @click="layout = 'vuejs'"
-              :class="{ 'underline text-clrAccent': layout === 'vuejs' }"
+              :class="{ 'list-style-active': layout === 'vuejs' }"
             >
               Vue JS
             </li>
             <li
-              class="py-2 text-xl cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
+              class="list-style"
               @click="layout = 'react'"
-              :class="{ 'underline text-clrAccent': layout === 'react' }"
+              :class="{ 'list-style-active': layout === 'react' }"
             >
               React
             </li>
             <li
-              class="py-2 text-xl cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
+              class="list-style"
               @click="layout = 'wordpress'"
-              :class="{ 'underline text-clrAccent': layout === 'wordpress' }"
+              :class="{ 'list-style-active': layout === 'wordpress' }"
             >
               WordPress
             </li>
             <li
-              class="py-2 text-xl cursor-pointer hover:text-clrAccent hover:underline underline-offset-8"
+              class="list-style"
               @click="layout = 'typescript'"
-              :class="{ 'underline text-clrAccent': layout === 'typescript' }"
+              :class="{ 'list-style-active': layout === 'typescript' }"
             >
               TypeScript
             </li>
@@ -316,3 +320,13 @@ export default {
   methods: {},
 };
 </script>
+
+<style scoped>
+.list-style {
+  @apply w-fit px-2 py-2 my-1 text-xl rounded-md cursor-pointer hover:bg-clrAccent underline-offset-8;
+}
+
+.list-style-active {
+  @apply bg-clrAccent text-clrSecondary;
+}
+</style>
