@@ -137,25 +137,25 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted } from 'vue';
 import {
   Popover,
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
-} from "@headlessui/vue";
-import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-import { useRoute, useRouter } from "vue-router";
-import { computed } from "vue";
+} from '@headlessui/vue';
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
+import { useRoute, useRouter } from 'vue-router';
+import { computed } from 'vue';
 
 const route = useRoute();
 const currentRoute = computed(() => {
   return route.name;
 });
 
-const twitter = "https://twitter.com/amagi_dev";
-const github = "https://github.com/nikolagp";
-const linkedin = "https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/";
+const twitter = 'https://twitter.com/amagi_dev';
+const github = 'https://github.com/nikolagp';
+const linkedin = 'https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/';
 
 const showNavbar = ref(true);
 let previousScrollPosition = 0;
@@ -177,11 +177,11 @@ const handleScroll = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener('scroll', handleScroll);
 });
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
+  window.removeEventListener('scroll', handleScroll);
 });
 </script>
 
