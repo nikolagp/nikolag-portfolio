@@ -7,7 +7,7 @@ export default defineConfig({
   theme: 'dark',
   themeConfig: {
     nav: [
-      { text: 'Portfolio', link: '/' },
+      { text: 'Portfolio', link: '../' },
       { text: 'Home', link: '/blog/' },
       { text: 'Posts', link: '/posts/' },
     ],

@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:all": "npm run build && npm run blog:build",
+    "postbuild:all": "mkdir -p dist/blog && cp -r blog/.vitepress/dist/* dist/blog/",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "blog:dev": "vitepress dev blog",

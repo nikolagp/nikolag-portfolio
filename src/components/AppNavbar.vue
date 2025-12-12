@@ -37,11 +37,8 @@
               class="text-base font-medium hover:text-clrAccent"
               >Contact</router-link
             >
-            <router-link
-              :to="{ name: 'blog_posts' }"
-              :class="{ active: currentRoute === 'blog_posts' }"
-              class="text-base font-medium hover:text-clrAccent"
-              >Blog</router-link
+            <a href="/blog/" class="text-base font-medium hover:text-clrAccent"
+              >Blog</a
             >
           </PopoverGroup>
         </div>
@@ -101,12 +98,7 @@
                   class="hover:text-clrAccent"
                   >Contact</router-link
                 >
-                <router-link
-                  :to="{ name: 'blog_posts' }"
-                  :class="{ active: currentRoute === 'blog_posts' }"
-                  class="hover:text-clrAccent"
-                  >Blog</router-link
-                >
+                <a href="/blog/" class="hover:text-clrAccent">Blog</a>
 
                 <div
                   class="flex justify-center gap-5 py-4 mt-10 align-baseline md:gap-20 md:w-1/2"

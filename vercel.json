@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build:all && npm run postbuild:all",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/blog/:path*",
+      "destination": "/blog/:path*"
+    }
+  ]
+}
