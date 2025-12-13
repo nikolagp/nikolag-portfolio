@@ -1,37 +1,55 @@
 {
-  "hash": "611bf26e",
-  "configHash": "4b890f48",
+  "hash": "0b2cef23",
+  "configHash": "2cc4ef2c",
   "lockfileHash": "4f804502",
-  "browserHash": "24e25e1c",
+  "browserHash": "c82f0d47",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "3201553f",
+      "fileHash": "abdcd91f",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/vitepress/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "ac37928e",
+      "fileHash": "fec9909c",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/vitepress/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "4d34d7e7",
+      "fileHash": "7945f82e",
       "needsInterop": false
     },
-    "@theme/index": {
-      "src": "../../../../node_modules/vitepress/dist/client/theme-default/index.js",
-      "file": "@theme_index.js",
-      "fileHash": "0a1d27de",
+    "@headlessui/vue": {
+      "src": "../../../../node_modules/@headlessui/vue/dist/headlessui.esm.js",
+      "file": "@headlessui_vue.js",
+      "fileHash": "ea205a98",
+      "needsInterop": false
+    },
+    "@heroicons/vue/24/outline": {
+      "src": "../../../../node_modules/@heroicons/vue/24/outline/esm/index.js",
+      "file": "@heroicons_vue_24_outline.js",
+      "fileHash": "f65d6450",
+      "needsInterop": false
+    },
+    "firebase/firestore": {
+      "src": "../../../../node_modules/firebase/firestore/dist/esm/index.esm.js",
+      "file": "firebase_firestore.js",
+      "fileHash": "f17dc96e",
+      "needsInterop": false
+    },
+    "firebase/app": {
+      "src": "../../../../node_modules/firebase/app/dist/esm/index.esm.js",
+      "file": "firebase_app.js",
+      "fileHash": "c5b76ac7",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-6ASJ7SXN": {
-      "file": "chunk-6ASJ7SXN.js"
+    "chunk-DNMTZRV4": {
+      "file": "chunk-DNMTZRV4.js"
     },
     "chunk-EKBJ2FPM": {
       "file": "chunk-EKBJ2FPM.js"

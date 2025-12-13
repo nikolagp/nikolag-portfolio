@@ -1,0 +1,157 @@
+<template>
+  <main id="nav" v-if="showNavbar">
+    <Popover
+      class="fixed top-0 left-0 right-0 z-10 text-clrSecondary bg-clrPrimaryLight"
+    >
+      <div class="px-4 mx-auto max-w-7xl sm:px-6">
+        <div class="flex items-center justify-between py-6 md:space-x-10">
+          <div class="flex justify-start lg:w-0 lg:flex-1">
+            <a href="/">
+              <img class="w-auto h-10 sm:h-10" src="/ngdev.ico" alt="NG Logo" />
+            </a>
+          </div>
+          <div class="-my-2 -mr-2 md:hidden">
+            <PopoverButton
+              class="inline-flex items-center justify-center p-2 rounded-md text-clrSecondary focus:outline-none md:hidden"
+            >
+              <span class="sr-only">Open menu</span>
+              <Bars3Icon class="w-8 h-8" aria-hidden="true" />
+            </PopoverButton>
+          </div>
+          <PopoverGroup as="nav" class="hidden space-x-10 md:flex">
+            <a href="/#about" class="text-base font-medium hover:text-clrAccent"
+              >About</a
+            >
+            <a
+              href="/#projects"
+              class="text-base font-medium hover:text-clrAccent"
+              >Projects</a
+            >
+            <a
+              href="/#contact"
+              class="text-base font-medium hover:text-clrAccent"
+              >Contact</a
+            >
+            <a href="/posts/" class="text-base font-medium hover:text-clrAccent"
+              >Blog</a
+            >
+          </PopoverGroup>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <transition
+        enter-active-class="duration-200 ease-out"
+        enter-from-class="scale-95 opacity-0"
+        enter-to-class="scale-100 opacity-100"
+        leave-active-class="duration-100 ease-in"
+        leave-from-class="scale-100 opacity-100"
+        leave-to-class="scale-95 opacity-0"
+      >
+        <PopoverPanel
+          class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform"
+        >
+          <div class="rounded-lg shadow-lg bg-clrPrimary divide-gray-50">
+            <div class="px-5 pt-5 pb-6">
+              <div class="flex items-center justify-between">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                  <a href="/">
+                    <img
+                      class="w-auto h-10 sm:h-10"
+                      src="/ngdev.ico"
+                      alt="NG Logo"
+                    />
+                  </a>
+                </div>
+                <div class="-mr-2">
+                  <PopoverButton
+                    class="inline-flex items-center justify-center p-2 rounded-md text-clrAccent hover:text-clrSecondary focus:outline-none"
+                  >
+                    <span class="sr-only">Close menu</span>
+                    <XMarkIcon class="w-8 h-8" aria-hidden="true" />
+                  </PopoverButton>
+                </div>
+              </div>
+            </div>
+            <div class="px-5 space-y-6 text-2xl">
+              <div class="flex flex-col text-center text-clrSecondary">
+                <a href="/#about" class="hover:text-clrAccent">About</a>
+                <a href="/#projects" class="hover:text-clrAccent">Projects</a>
+                <a href="/#contact" class="hover:text-clrAccent">Contact</a>
+                <a href="/posts/" class="hover:text-clrAccent">Blog</a>
+
+                <div
+                  class="flex justify-center gap-5 py-4 mt-10 align-baseline md:gap-20 md:w-1/2"
+                >
+                  <a :href="github" target="_blank"
+                    ><i
+                      class="text-3xl cursor-pointer text-clrSecondary fa-brands fa-github hover:text-clrAccent"
+                    ></i>
+                  </a>
+                  <a :href="linkedin" target="_blank"
+                    ><i
+                      class="text-3xl cursor-pointer text-clrSecondary fa-brands fa-linkedin hover:text-clrAccent"
+                    ></i
+                  ></a>
+                  <a :href="twitter" target="_blank"
+                    ><i
+                      class="text-3xl cursor-pointer text-clrSecondary fa-brands fa-twitter hover:text-clrAccent"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </PopoverPanel>
+      </transition>
+    </Popover>
+  </main>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import {
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+} from '@headlessui/vue';
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
+
+const twitter = 'https://twitter.com/amagi_dev';
+const github = 'https://github.com/nikolagp';
+const linkedin = 'https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/';
+
+const showNavbar = ref(true);
+let previousScrollPosition = 0;
+
+const handleScroll = () => {
+  const currentScrollPosition =
+    window.pageYOffset || document.documentElement.scrollTop;
+
+  if (Math.abs(currentScrollPosition - previousScrollPosition) < 60) {
+    return;
+  }
+
+  if (currentScrollPosition < 0) {
+    return;
+  }
+
+  showNavbar.value = currentScrollPosition < previousScrollPosition;
+  previousScrollPosition = currentScrollPosition;
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+</script>
+
+<style scoped>
+.active {
+  color: var(--clrAccent);
+}
+</style>

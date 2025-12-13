@@ -1,10 +1,25 @@
-# Welcome to My Blog
+---
+layout: page
+---
 
-This is my personal blog where I share thoughts, insights, and experiences on web development, Vue.js, and technology.
+<script setup>
+import AppHeader from './.vitepress/theme/components/AppHeader.vue'
+import AppAbout from './.vitepress/theme/components/AppAbout.vue'
+import AppProjects from './.vitepress/theme/components/AppProjects.vue'
+import AppContact from './.vitepress/theme/components/AppContact.vue'
+</script>
 
-## Latest Posts
+<div class="portfolio-home overflow-hidden">
+  <AppHeader />
+  <AppAbout />
+  <AppProjects />
+  <AppContact />
+</div>
 
-- [First Post](/posts/first-post)
-- [Second Post](/posts/second-post)
-
-Stay tuned for more updates!
+<style scoped>
+.portfolio-home {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+</style>

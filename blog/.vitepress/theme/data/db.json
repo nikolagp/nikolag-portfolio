@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "title": "How to learn VueJS",
+      "id": 1,
+      "image": "/assets/images/hauzapp.png",
+      "imageAlt": "Lorem",
+      "details": "Lorem Ipsum VUE",
+      "tags": ["vuejs", "js", "css"],
+      "body": "The Composition API is a set of functions that allows you to use reactive state and methods in a Vue component in a way that is more flexible and easier to understand than the traditional Options API. Here are some benefits of using the Composition API"
+    },
+    {
+      "title": "How to learn JS",
+      "id": 2,
+      "image": "/assets/images/hauzapp.png",
+      "imageAlt": "Lorem",
+      "details": "Lorem Ipsum JS",
+      "tags": ["vuejs", "javascript", "css"],
+      "body": "Nikola Petrovski Nikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola Petrovski Nikola Petrovski"
+    },
+    {
+      "title": "How to learn CSS",
+      "id": 3,
+      "image": "/assets/images/hauzapp.png",
+      "imageAlt": "Lorem",
+      "details": "Lorem Ipsum CSS",
+      "tags": ["vuejs", "javascript", "css"],
+      "body": "Nikola Petrovski Nikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola PetrovskiNikola Petrovski Nikola Petrovski"
+    }
+  ]
+}
