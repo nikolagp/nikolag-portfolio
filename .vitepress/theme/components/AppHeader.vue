@@ -1,8 +1,8 @@
 <template>
   <main
-    class="relative flex flex-col min-h-screen pb-10 overflow-hidden md:pt-0 p-top-30 md:justify-center"
+    class="relative flex flex-col min-h-screen pb-10 overflow-hidden md:justify-center"
   >
-    <div>
+    <div class="translate-y-20">
       <div class="flex flex-col gap-8 justify-evenly">
         <h1
           class="text-3xl font-bold tracking-tight text-center md:text-4xl lg:text-6xl"
