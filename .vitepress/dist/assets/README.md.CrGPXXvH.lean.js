@@ -1,0 +1,1 @@
+import{_ as a,c as n,o,ag as t}from"./chunks/framework.BlG8Ex8O.js";const h=JSON.parse('{"title":"Nikola G Portfolio","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),s={name:"README.md"};function r(i,e,l,p,d,c){return o(),n("div",null,[...e[0]||(e[0]=[t("",14)])])}const m=a(s,[["render",r]]);export{h as __pageData,m as default};
