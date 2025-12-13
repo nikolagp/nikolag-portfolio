@@ -3,6 +3,7 @@ import {
   createElementBlock,
   openBlock
 } from "./chunk-EKBJ2FPM.js";
+import "./chunk-5WRI5ZAA.js";
 
 // node_modules/@heroicons/vue/24/outline/esm/AcademicCapIcon.js
 function render(_ctx, _cache) {

@@ -17,6 +17,7 @@ import {
   isSafari,
   registerVersion
 } from "./chunk-DNMTZRV4.js";
+import "./chunk-5WRI5ZAA.js";
 
 // node_modules/@firebase/webchannel-wrapper/dist/esm/index.esm2017.js
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
