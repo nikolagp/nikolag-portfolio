@@ -2,7 +2,7 @@ import {
   createBaseVNode,
   createElementBlock,
   openBlock
-} from "./chunk-EKBJ2FPM.js";
+} from "./chunk-SLVPRFL3.js";
 import "./chunk-5WRI5ZAA.js";
 
 // node_modules/@heroicons/vue/24/outline/esm/AcademicCapIcon.js

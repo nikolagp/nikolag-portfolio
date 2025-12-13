@@ -30,7 +30,7 @@ export default defineConfig({
   vite: {
     css: {
       postcss: {
-        plugins: [tailwindcss('./blog/tailwind.config.js'), autoprefixer()],
+        plugins: [tailwindcss('./tailwind.config.js'), autoprefixer()],
       },
     },
   },

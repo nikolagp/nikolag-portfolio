@@ -4,15 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "build:all": "npm run build && npm run blog:build",
-    "postbuild:all": "mkdir -p dist/blog && cp -r blog/.vitepress/dist/* dist/blog/",
-    "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "blog:dev": "vitepress dev blog",
-    "blog:build": "vitepress build blog",
-    "blog:preview": "vitepress preview blog"
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.4",
