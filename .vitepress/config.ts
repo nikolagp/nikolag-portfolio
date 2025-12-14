@@ -7,6 +7,7 @@ export default defineConfig({
   description: 'Portfolio and Blog by Nikola',
   base: '/',
   head: [
+    ['link', { rel: 'icon', href: '/ngdev.ico' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     [
       'link',
