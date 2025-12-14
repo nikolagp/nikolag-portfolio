@@ -1,6 +1,6 @@
 <template>
   <main
-    class="relative flex flex-col min-h-screen pb-10 overflow-hidden justify-center items-center"
+    class="relative flex flex-col items-center justify-center min-h-screen pb-10 overflow-hidden"
   >
     <div class="translate-y-10 md:translate-y-20">
       <div class="flex flex-col gap-4 md:gap-8 justify-evenly">
