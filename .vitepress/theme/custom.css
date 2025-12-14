@@ -201,3 +201,17 @@ body:not(.portfolio-home) .VPDoc .content {
   padding: 0 32px !important;
   margin: 0 !important;
 }
+
+/* Fix layout centering */
+.VPPage, .VPContent, .VPDoc {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove sidebar space if any */
+.VPContent.has-sidebar {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}

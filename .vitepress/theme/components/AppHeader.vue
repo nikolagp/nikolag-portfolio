@@ -1,9 +1,9 @@
 <template>
   <main
-    class="relative flex flex-col min-h-screen pb-10 overflow-hidden md:justify-center"
+    class="relative flex flex-col min-h-screen pb-10 overflow-hidden justify-center items-center"
   >
-    <div class="translate-y-20">
-      <div class="flex flex-col gap-8 justify-evenly">
+    <div class="translate-y-10 md:translate-y-20">
+      <div class="flex flex-col gap-4 md:gap-8 justify-evenly">
         <h1
           class="text-3xl font-bold tracking-tight text-center md:text-4xl lg:text-6xl"
         >
@@ -27,7 +27,7 @@
         <!-- Buttons -->
 
         <div
-          class="flex justify-center mt-8 gap-x-4"
+          class="flex justify-center mt-4 md:mt-8 gap-x-4"
           data-aos="zoom-in-up"
           data-aos-delay="1000"
           data-aos-duration="1000"

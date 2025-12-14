@@ -1,3 +1,11 @@
+---
+title: Second Post
+date: 2025-12-12
+description: In this post, I'm discussing the benefits of using Tailwind CSS for styling modern web applications.
+image: /assets/images/tailwind-logo.png
+tags: ['Tailwind CSS', 'CSS']
+---
+
 # Second Post
 
 _Published on December 11, 2025_
