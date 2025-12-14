@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="overflow-hidden text-clrSecondary">
+  <section id="projects" class="overflow-hidden text-clrSecondary">
     <div class="mx-auto max-w-7xl">
       <h2
         class="text-3xl font-bold text-center text-clrSecondary md:text-left md:text-4xl"
