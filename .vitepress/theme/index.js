@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import AppNavbar from './components/AppNavbar.vue';
 import AppFooter from './components/AppFooter.vue';
+import AppBlogIndex from './components/AppBlogIndex.vue';
 
 const CustomLayout = defineComponent({
   setup() {
@@ -28,14 +29,15 @@ const CustomLayout = defineComponent({
         nextTick(() => {
           AOS.refresh();
         });
-      }
+      },
     );
 
-    return () => h('div', { class: 'custom-layout' }, [
-      h(AppNavbar),
-      h(DefaultTheme.Layout),
-      h(AppFooter),
-    ]);
+    return () =>
+      h('div', { class: 'custom-layout' }, [
+        h(AppNavbar),
+        h(DefaultTheme.Layout),
+        h(AppFooter),
+      ]);
   },
 });
 
@@ -43,6 +45,7 @@ export default {
   extends: DefaultTheme,
   Layout: CustomLayout,
   enhanceApp({ app, router, siteData }) {
-    // Register global components if needed
+    // Register global components
+    app.component('AppBlogIndex', AppBlogIndex);
   },
 };

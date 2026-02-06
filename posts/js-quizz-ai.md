@@ -12,7 +12,7 @@ _Published on December 19, 2025_
 
 ## From Mindless Scrolling to Something Useful
 
-Usually, before going to bed—or already in bed—I’d catch myself scrolling through reels, jumping between different social media apps without any real purpose. Just wasting precious time that should’ve gone to sleep.
+Usually, before going to bed - or already in bed - I’d catch myself scrolling through reels, jumping between different social media apps without any real purpose. Just wasting precious time that should’ve gone to sleep.
 
 Then one night I thought: if I’m not sleeping anyway, why waste time pointlessly? Why not learn something or read something useful?
 
@@ -20,7 +20,7 @@ Even though my phone is a Pro Max with a big screen, I never really managed to u
 
 ## The Interview Questions Idea
 
-Around that time, I had been reading interview questions, mostly JavaScript-related. I started going through them on GitHub, but honestly, it wasn’t a great experience. Every time I opened the page, I’d start from the top again, read the first 10 or 15 questions, and then stop—out of more than 150.
+Around that time, I had been reading interview questions, mostly JavaScript-related. I started going through them on GitHub, but honestly, it wasn’t a great experience. Every time I opened the page, I’d start from the top again, read the first 10 or 15 questions, and then stop-out of more than 150.
 
 That’s when another thought hit me:
 
@@ -30,7 +30,7 @@ The questions already existed in a [public GitHub repository](https://github.com
 
 ## Building It (Without Overthinking)
 
-I didn’t want to spend too much time on this. It’s a simple project—almost a junior-level one—and I already knew what needed to be done. So I decided to try one of the free AI tools to scaffold the app quickly and then polish it later.
+I didn’t want to spend too much time on this. It’s a simple project - almost a junior-level one - and I already knew what needed to be done. So I decided to try one of the free AI tools to scaffold the app quickly and then polish it later.
 
 This was the main prompt I used.
 
@@ -77,10 +77,10 @@ And that was it. I ended up with a JavaScript quiz app containing **155 question
 
 ## A Better Alternative to Scrolling
 
-And I actually did it. Instead of endlessly scrolling through Instagram or Facebook feeds full of mostly useless content, I now had a much better alternative—something that actually helps me learn.
+And I actually did it. Instead of endlessly scrolling through Instagram or Facebook feeds full of mostly useless content, I now had a much better alternative - something that actually helps me learn.
 
 ## What’s Next?
 
-I could easily connect this to a database like Supabase and add user profiles with progress tracking. I’m also thinking about adding different types of questions—Python, React, Next.js, Vue, and more.
+I could easily connect this to a database like Supabase and add user profiles with progress tracking. I’m also thinking about adding different types of questions: Python, React, Next.js, Vue, and more.
 
 But that might be a topic for another blog post.
