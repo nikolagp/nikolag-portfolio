@@ -5,6 +5,10 @@ description: This is my first blog post! Here I'm sharing my journey with softwa
 image: /assets/images/vue-logo.png
 tags: ['Personal', 'Web Development']
 ---
+# On the Road to the Keyboard: Curiosity, detours, and learning my way into tech
+
+_Published on February 06, 2026_
+
 ## When Writing Fell Silent
 
 One of the things I missed when I started learning and working in IT was **writing**.
