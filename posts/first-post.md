@@ -1,9 +1,9 @@
 ---
-title: On the Road to the Keyboard: Curiosity, detours, and learning my way into tech
+title: On the Road to the Keyboard - Curiosity, detours, and learning my way into tech
 date: 2026-02-06
 description: This is my first blog post! Here I'm sharing my journey with software development.
 image: /assets/images/vue-logo.png
-tags: ['Vue.js', 'Web Development']
+tags: ['Personal', 'Web Development']
 ---
 ## When Writing Fell Silent
 
@@ -126,14 +126,4 @@ Through different stages of my life, I built soft skills. As a musician, I learn
 Research and methodology from my studies shaped how I approach writing and problem-solving today.
 
 All of that helps me now — in meetings, demos, software presentations for stakeholders. Writing skills help me structure emails and motivational letters clearly. Conferences taught me how to approach new people with confidence. Group workshops taught me how to work in a team.
-
----
-
-## Still Curious
-
-My curiosity led me here.
-
-And it will continue to lead me forward — to learn, to adapt, and to discover what’s next.
-
-If you want, I can do a **second pass** later focused only on flow (not grammar), or help you turn this into a blog post or LinkedIn article without losing its soul.
 
