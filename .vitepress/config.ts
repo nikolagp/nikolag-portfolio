@@ -1,6 +1,39 @@
 import { defineConfig } from 'vitepress';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
+import { readdirSync, readFileSync } from 'fs';
+import { join } from 'path';
+import matter from 'gray-matter';
+
+// Function to generate sidebar items from posts
+function generateSidebar() {
+  const postsDir = join(__dirname, '../posts');
+  const files = readdirSync(postsDir).filter(
+    (file) => file.endsWith('.md') && file !== 'index.md',
+  );
+
+  const posts = files.map((file) => {
+    const filePath = join(postsDir, file);
+    const content = readFileSync(filePath, 'utf-8');
+    const { data } = matter(content);
+
+    return {
+      title: data.title || file.replace('.md', ''),
+      link: `/posts/${file.replace('.md', '')}`,
+      date: data.date ? new Date(data.date) : new Date(0),
+    };
+  });
+
+  // Sort by date (newest first)
+  posts.sort((a, b) => b.date.getTime() - a.date.getTime());
+
+  return [
+    {
+      text: 'Posts',
+      items: posts.map(({ title, link }) => ({ text: title, link })),
+    },
+  ];
+}
 
 export default defineConfig({
   title: 'Nikola Portfolio',
@@ -40,15 +73,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Blog', link: '/posts/' },
     ],
-    sidebar: [
-      {
-        text: 'Posts',
-        items: [
-          { text: 'First Post', link: '/posts/first-post' },
-          { text: 'Second Post', link: '/posts/second-post' },
-        ],
-      },
-    ],
+    sidebar: generateSidebar(),
     socialLinks: [
       { icon: 'github', link: 'https://github.com' },
       { icon: 'twitter', link: 'https://twitter.com' },
