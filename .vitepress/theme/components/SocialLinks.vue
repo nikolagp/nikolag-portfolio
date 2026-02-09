@@ -20,14 +20,14 @@
     ></a>
     <a :href="twitter" target="_blank"
       ><i
-        class="text-4xl cursor-pointer text-clrSecondary fa-brands fa-twitter hover:text-clrAccent"
+        class="text-4xl cursor-pointer text-clrSecondary fa-brands fa-x-twitter hover:text-clrAccent"
       ></i
     ></a>
   </div>
 </template>
 
 <script setup>
-const twitter = "https://twitter.com/amagi_dev";
-const github = "https://github.com/nikolagp";
-const linkedin = "https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/";
+const twitter = 'https://twitter.com/amagi_dev';
+const github = 'https://github.com/nikolagp';
+const linkedin = 'https://www.linkedin.com/in/nikola-g-petrovski-b02584b1/';
 </script>

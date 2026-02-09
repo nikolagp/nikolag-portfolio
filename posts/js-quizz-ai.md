@@ -40,15 +40,10 @@ I want you to create a quiz web app using the questions and answers from the fol
 Steps:
 
 - First, extract the questions and answers from the file (you may use a script for this).
-
 This should be straightforward since the file is written in Markdown and the questions are numbered.
-
 The answers are located below each question in an accordion-style section.
-
 - Use the extracted data to build the flashcards interface.
-
 - Upload the finished project to GitHub and deploy it on Vercel.
-
 Here is the file you should use:
 https://github.com/lydiahallie/javascript-questions/blob/master/README.md
 

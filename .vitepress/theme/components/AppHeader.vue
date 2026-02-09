@@ -21,7 +21,7 @@
             data-aos-duration="2000"
             data-aos-easing="ease-in-out"
           >
-            Frontend Developer</span
+            FullStack Developer</span
           >
         </h1>
         <!-- Buttons -->

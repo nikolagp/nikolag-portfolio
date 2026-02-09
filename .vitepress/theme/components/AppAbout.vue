@@ -19,14 +19,53 @@
           class="w-full md:w-1/2"
         >
           <p class="max-w-2xl mx-auto leading-8 text-clrSecondary">
-            Hi, I’m Nikola. Frontend developer - self-taught. Eager to explore
+            Hi, I’m Nikola. FullStack developer - self-taught. Eager to explore
             the nature, my open mind and the new technologies. I consider myself
             to be a fast learner, able to grasp new concepts quickly with
-            excellent capacity to remember new information. <br /><strong
-              >My tech stack in short includes: JavaScript, TypeScript, VueJS,
-              Tailwind, CSS, Firebase and WordPress.</strong
-            >
+            excellent capacity to remember new information.
           </p>
+            <span class="inline-block py-2 text-lg font-bold"
+            >Technical Skills & Experience:</span
+            >
+          <ul class="leading-8 text-clrSecondary">
+            <li>
+              - React.js – Contributing daily to production web applications;
+              implementing features and reusable components using Redux,
+              Redux-Saga, with SSR and CSR
+            </li>
+            <li>
+              - Testing – Writing and maintaining unit and component tests with
+              Jest, React Testing Library, and Mocha; updating automation tests
+              with TestCafe
+            </li>
+            <li>
+              - Material UI (MUI) – Executed migration from MUI v4 to v6,
+              addressing breaking changes and refactoring UI components
+            </li>
+            <li>
+              - Backend & Architecture – Developing and maintaining Node.js
+              WebAPI services within a microservices architecture, supporting
+              multi-service API flows
+            </li>
+            <li>
+              - Cloud & CI/CD – Working knowledge of AWS (S3, DynamoDB);
+              experience editing YAML-based pipelines in Bitbucket and GitHub
+            </li>
+            <li>
+              - Tooling & Collaboration – Swagger/OpenAPI, ConfigCat, Jira,
+              Papertrail for API documentation, feature flags, issue tracking,
+              and log monitoring
+            </li>
+            <li>
+              - Development Environments – Building and testing applications on
+              Windows and Linux; configuring VirtualBox virtual machines
+            </li>
+            <li>
+              - Personal Projects – Building applications with Vue, Vite,
+              TypeScript, Next.js, and Supabase (PostgreSQL); leveraging GitHub
+              Copilot
+            </li>
+          </ul>
           <br />
           <button
             v-show="!readMore"
