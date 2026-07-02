@@ -50,13 +50,6 @@
             >
               WordPress
             </li>
-            <li
-              class="list-style"
-              @click="layout = 'typescript'"
-              :class="{ 'list-style-active': layout === 'typescript' }"
-            >
-              TypeScript
-            </li>
           </ul>
         </div>
 

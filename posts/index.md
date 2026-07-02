@@ -4,7 +4,7 @@ sidebar: false
 title: Blog Posts
 ---
 
-<div class="mx-auto max-w-7xl px-6 lg:px-8 pt-12 text-center">
+<div class="mx-auto max-w-7xl px-6 lg:px-8 pt-28 text-center">
   <h1 class="text-3xl font-bold tracking-tight text-clrSecondary sm:text-4xl">
     Blog Posts
   </h1>

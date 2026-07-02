@@ -2,178 +2,51 @@
   <section id="projects" class="overflow-hidden text-clrSecondary">
     <div class="mx-auto max-w-7xl">
       <h2
-        class="text-3xl font-bold text-center text-clrSecondary md:text-left md:text-4xl"
+        class="text-3xl font-bold text-clrSecondary md:text-4xl"
+        data-aos="fade-up"
+        data-aos-duration="600"
       >
         Projects
       </h2>
 
-      <div class="flex flex-col justify-center md:justify-between md:flex-row">
-        <div
-          class="flex flex-col items-center mb-10 md:items-start md:w-1/4 text-clrSecondary"
+      <!-- Filter pills -->
+      <div
+        class="mb-10 flex flex-wrap justify-center gap-2 md:justify-start"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="600"
+      >
+        <button
+          v-for="tab in tabs"
+          :key="tab.key"
+          @click="layout = tab.key"
+          :class="[
+            'rounded-full px-4 py-1.5 text-sm font-medium transition-colors duration-200',
+            layout === tab.key
+              ? 'bg-clrAccent text-clrSecondary'
+              : 'border border-clrSecondaryLight/20 text-clrSecondaryLight hover:border-clrAccent/50 hover:text-clrAccent',
+          ]"
         >
-          <ul
-            data-aos="fade-right"
-            data-aos-offset="0"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="false"
-            class="w-auto text-center md:text-left"
-          >
-            <li
-              class="list-style"
-              @click="layout = 'vanillajs'"
-              :class="{
-                'list-style-active': layout === 'vanillajs',
-              }"
-            >
-              JavaScript
-            </li>
-            <li
-              class="list-style"
-              @click="layout = 'vuejs'"
-              :class="{ 'list-style-active': layout === 'vuejs' }"
-            >
-              Vue JS
-            </li>
-            <li
-              class="list-style"
-              @click="layout = 'react'"
-              :class="{ 'list-style-active': layout === 'react' }"
-            >
-              React
-            </li>
-            <li
-              class="list-style"
-              @click="layout = 'wordpress'"
-              :class="{ 'list-style-active': layout === 'wordpress' }"
-            >
-              WordPress
-            </li>
-            <li
-              class="list-style"
-              @click="layout = 'typescript'"
-              :class="{ 'list-style-active': layout === 'typescript' }"
-            >
-              TypeScript
-            </li>
-          </ul>
-        </div>
+          {{ tab.label }}
+        </button>
+      </div>
 
-        <!-- Project cards -->
-        <div
-          data-aos="fade-left"
-          data-aos-offset="0"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          class="cursor-pointer md:w-3/4"
-        >
-          <!-- VueJS -->
-          <div
-            v-if="layout === 'vuejs'"
-            class="space-y-6 duration-300 ease-in active lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
-          >
-            <div
-              v-for="project in vuejs"
-              :key="project.name"
-              class="relative group"
-            >
-              <AppProjectCard
-                :name="project.name"
-                :imageSrc="project.imageSrc"
-                :imageAlt="project.imageAlt"
-                :description="project.description"
-                :href="project.href"
-              />
-            </div>
-          </div>
-
-          <!-- Vanilla JS -->
-
-          <div
-            v-if="layout === 'vanillajs'"
-            class="space-y-6 active lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
-          >
-            <div
-              v-for="project in vanillajs"
-              :key="project.name"
-              class="relative group"
-            >
-              <AppProjectCard
-                :name="project.name"
-                :imageSrc="project.imageSrc"
-                :imageAlt="project.imageAlt"
-                :description="project.description"
-                :href="project.href"
-              />
-            </div>
-          </div>
-
-          <!-- WordPress -->
-
-          <div
-            v-if="layout === 'wordpress'"
-            class="space-y-6 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
-          >
-            <div
-              v-for="project in wordpress"
-              :key="project.name"
-              class="relative group"
-            >
-              <AppProjectCard
-                :name="project.name"
-                :imageSrc="project.imageSrc"
-                :imageAlt="project.imageAlt"
-                :description="project.description"
-                :href="project.href"
-              />
-            </div>
-          </div>
-
-          <!-- TypeScript -->
-
-          <div
-            v-if="layout === 'typescript'"
-            class="space-y-6 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
-          >
-            <div
-              v-for="project in typescript"
-              :key="project.name"
-              class="relative group"
-            >
-              <AppProjectCard
-                :name="project.name"
-                :imageSrc="project.imageSrc"
-                :imageAlt="project.imageAlt"
-                :description="project.description"
-                :href="project.href"
-              />
-            </div>
-          </div>
-
-          <!-- React -->
-
-          <div
-            v-if="layout === 'react'"
-            class="space-y-6 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0"
-          >
-            <div
-              v-for="project in react"
-              :key="project.name"
-              class="relative group"
-            >
-              <AppProjectCard
-                :name="project.name"
-                :imageSrc="project.imageSrc"
-                :imageAlt="project.imageAlt"
-                :description="project.description"
-                :href="project.href"
-              />
-            </div>
-          </div>
-        </div>
+      <!-- Project cards grid -->
+      <div
+        class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        data-aos="fade-up"
+        data-aos-delay="150"
+        data-aos-duration="800"
+      >
+        <AppProjectCard
+          v-for="project in activeProjects"
+          :key="project.name"
+          :name="project.name"
+          :imageSrc="project.imageSrc"
+          :imageAlt="project.imageAlt"
+          :description="project.description"
+          :href="project.href"
+        />
       </div>
     </div>
   </section>
@@ -184,149 +57,129 @@ import AppProjectCard from './AppProjectCard.vue';
 
 export default {
   name: 'AppProjects',
-  components: {
-    AppProjectCard,
-  },
+  components: { AppProjectCard },
 
   data() {
     return {
       layout: 'vanillajs',
 
-      vanillajs: [
-        {
-          name: 'Bankist Application',
-          description:
-            'Simple bank application for tracking deposits and withdrawals',
-          imageSrc: '/assets/images/bankist_app.png',
-          imageAlt: 'Bankist App Dashboard',
-          href: 'https://github.com/nikolagp/bankist',
-          category: 'vanillajs',
-        },
-        {
-          name: 'Bankist - Website',
-          description: 'Website for bank application',
-          imageSrc: '/assets/images/bankist.png',
-          imageAlt: 'Bankist Website',
-          href: 'https://github.com/nikolagp/bankist-web',
-          category: 'vanillajs',
-        },
-        {
-          name: 'Guess My Number',
-          description: 'Game: Guess my number',
-          imageSrc: '/assets/images/gmn_game.png',
-          imageAlt:
-            'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
-          href: 'https://github.com/nikolagp/guess-my-number',
-          category: 'vanillajs',
-        },
-        {
-          name: 'Mapty Application',
-          description: 'Map and track your workouts',
-          imageSrc: '/assets/images/mapty.png',
-          imageAlt:
-            'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
-          href: 'https://github.com/nikolagp/workout-mapp',
-          category: 'vanillajs',
-        },
+      tabs: [
+        { key: 'vanillajs', label: 'JavaScript' },
+        { key: 'vuejs', label: 'Vue JS' },
+        { key: 'react', label: 'React' },
+        { key: 'wordpress', label: 'WordPress' },
       ],
-      vuejs: [
-        {
-          name: 'Music Platform',
-          description:
-            'Music platform built with Vue 3, Firebase and TailwindCSS',
-          imageSrc: '/assets/images/hauzapp.png',
-          imageAlt:
-            'Cover of music platform built with Vue 3, Firebase and TailwindCSS.',
-          href: 'https://github.com/nikolagp/music-app-vue',
-          category: 'vuejs',
-        },
-        {
-          name: 'Portfolio Website',
-          description:
-            'Portfolio website built with Vue 3, Vite and TailwindCSS',
-          imageSrc: '/assets/images/nikolagportfolio.png',
-          imageAlt:
-            'Cover of Portfolio website built with Vue 3, Vite and TailwindCSS',
-          href: '#',
-          category: 'vuejs',
-        },
-        {
-          name: 'Political Quizz',
-          description: 'Quizz app buil with Vue 3',
-          imageSrc: '/assets/images/vuejs.webp',
-          imageAlt: 'Cover of Quizz app buil with Vue 3',
-          href: 'https://github.com/nikolagp/quizz',
-          category: 'vuejs',
-        },
-      ],
-      wordpress: [
-        {
-          name: 'Liberty In Our Lifetime - Conference (2022)',
-          description: 'Website for the conference',
-          imageSrc: '/assets/images/liol.png',
-          imageAlt: 'Liberty in ourlifetime Conference 2022.',
-          href: 'https://lifetimeliberty.com/',
-          category: 'wordpress',
-        },
-        {
-          name: 'Free City Foundation (2022)',
-          description: 'Website for the foundation - Free Cities Foundation',
-          imageSrc: '/assets/images/fcf.png',
-          imageAlt: 'Cover of the website for the Free Cities FOundation',
-          href: 'https://free-cities.org/',
-          category: 'wordpress',
-        },
-        {
-          name: 'Libertania - Center for Contemporary Politics (2020)',
-          description: 'Website for non-profit organization Libertania',
-          imageSrc: '/assets/images/libertania.png',
-          imageAlt:
-            'Cover photo of the website for non-profit organization Libertania',
-          href: 'https://libertania.org/',
-          category: 'wordpress',
-        },
-        {
-          name: 'Media Instruction, Resources and Advocacy - MIRA (2020)',
-          description: 'Website for non-profit organization MIRA',
-          imageSrc: '/assets/images/mira.png',
-          imageAlt:
-            'Cover photo of the website for non-profit organization MIRA',
-          href: '#',
-          category: 'wordpress',
-        },
-      ],
-      typescript: [
-        {
-          name: 'Simple Todo App',
-          description: 'Todo app made with TypeScript, Tailwind and Vite',
-          imageSrc: '/assets/images/todo-ts.png',
-          imageAlt: 'Screenshot from Todo-App',
-          href: 'https://github.com/nikolagp/type-script-todo',
-          category: 'typescript',
-        },
-      ],
-      react: [
-        {
-          name: 'Cook Inc. Recipe App',
-          description: 'Cook Inc. app made with React, Tailwind and Vite',
-          imageSrc: '/assets/images/cookinc.png',
-          imageAlt: 'Screenshot from cookinc-App',
-          href: 'https://github.com/nikolagp/cookinc-app',
-          category: 'react',
-        },
-      ],
+
+      projects: {
+        vanillajs: [
+          {
+            name: 'Bankist Application',
+            description: 'Simple bank application for tracking deposits and withdrawals',
+            imageSrc: '/assets/images/bankist_app.png',
+            imageAlt: 'Bankist App Dashboard',
+            href: 'https://github.com/nikolagp/bankist',
+          },
+          {
+            name: 'Bankist - Website',
+            description: 'Website for bank application',
+            imageSrc: '/assets/images/bankist.png',
+            imageAlt: 'Bankist Website',
+            href: 'https://github.com/nikolagp/bankist-web',
+          },
+          {
+            name: 'Guess My Number',
+            description: 'Game: Guess my number',
+            imageSrc: '/assets/images/gmn_game.png',
+            imageAlt: 'Guess My Number game screenshot',
+            href: 'https://github.com/nikolagp/guess-my-number',
+          },
+          {
+            name: 'Mapty Application',
+            description: 'Map and track your workouts',
+            imageSrc: '/assets/images/mapty.png',
+            imageAlt: 'Mapty workout map app',
+            href: 'https://github.com/nikolagp/workout-mapp',
+          },
+        ],
+        vuejs: [
+          {
+            name: 'Music Platform',
+            description: 'Music platform built with Vue 3, Firebase and TailwindCSS',
+            imageSrc: '/assets/images/hauzapp.png',
+            imageAlt: 'Music platform built with Vue 3, Firebase and TailwindCSS',
+            href: 'https://github.com/nikolagp/music-app-vue',
+          },
+          {
+            name: 'Portfolio Website',
+            description: 'Portfolio website built with Vue 3, Vite and TailwindCSS',
+            imageSrc: '/assets/images/nikolagportfolio.png',
+            imageAlt: 'Portfolio website built with Vue 3, Vite and TailwindCSS',
+            href: '#',
+          },
+          {
+            name: 'Political Quizz',
+            description: 'Quizz app built with Vue 3',
+            imageSrc: '/assets/images/vuejs.webp',
+            imageAlt: 'Quizz app built with Vue 3',
+            href: 'https://github.com/nikolagp/quizz',
+          },
+        ],
+        wordpress: [
+          {
+            name: 'Liberty In Our Lifetime - Conference (2022)',
+            description: 'Website for the conference',
+            imageSrc: '/assets/images/liol.png',
+            imageAlt: 'Liberty in Our Lifetime Conference 2022',
+            href: 'https://lifetimeliberty.com/',
+          },
+          {
+            name: 'Free City Foundation (2022)',
+            description: 'Website for the foundation — Free Cities Foundation',
+            imageSrc: '/assets/images/fcf.png',
+            imageAlt: 'Free Cities Foundation website',
+            href: 'https://free-cities.org/',
+          },
+          {
+            name: 'Libertania (2020)',
+            description: 'Website for non-profit organization Libertania — Center for Contemporary Politics',
+            imageSrc: '/assets/images/libertania.png',
+            imageAlt: 'Libertania website',
+            href: 'https://libertania.org/',
+          },
+          {
+            name: 'MIRA (2020)',
+            description: 'Website for non-profit organization — Media Instruction, Resources and Advocacy',
+            imageSrc: '/assets/images/mira.png',
+            imageAlt: 'MIRA website',
+            href: '#',
+          },
+        ],
+        typescript: [
+          {
+            name: 'Simple Todo App',
+            description: 'Todo app made with TypeScript, Tailwind and Vite',
+            imageSrc: '/assets/images/todo-ts.png',
+            imageAlt: 'TypeScript Todo App',
+            href: 'https://github.com/nikolagp/type-script-todo',
+          },
+        ],
+        react: [
+          {
+            name: 'Cook Inc. Recipe App',
+            description: 'Cook Inc. app made with React, Tailwind and Vite',
+            imageSrc: '/assets/images/cookinc.png',
+            imageAlt: 'Cook Inc. Recipe App',
+            href: 'https://github.com/nikolagp/cookinc-app',
+          },
+        ],
+      },
     };
   },
-  methods: {},
+
+  computed: {
+    activeProjects() {
+      return this.projects[this.layout] || [];
+    },
+  },
 };
 </script>
-
-<style scoped>
-.list-style {
-  @apply w-fit px-2 py-2 my-1 text-xl rounded-md cursor-pointer hover:bg-clrAccent underline-offset-8;
-}
-
-.list-style-active {
-  @apply bg-clrAccent text-clrSecondary;
-}
-</style>

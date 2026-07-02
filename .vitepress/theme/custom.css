@@ -14,10 +14,8 @@
 
 body {
   background-color: var(--clrPrimary);
-  background-image: url(/assets/images/background.svg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top;
+  background-image: radial-gradient(circle, rgba(249, 249, 246, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
 h1 {
@@ -189,17 +187,162 @@ main {
   padding-top: 0 !important;
 }
 
-/* Better styling for blog posts pages - centered content */
+/* Blog post pages — centered reading column */
 body:not(.portfolio-home) .VPDoc .container {
-  max-width: 1200px !important;
+  max-width: 800px !important;
   margin: 0 auto !important;
-  padding: 80px 24px 24px 24px !important;
+  padding: 80px 24px 60px 24px !important;
 }
 
 body:not(.portfolio-home) .VPDoc .content {
   max-width: 100% !important;
-  padding: 0 32px !important;
+  padding: 0 !important;
   margin: 0 !important;
+}
+
+/* Prose typography */
+body:not(.portfolio-home) .vp-doc h2 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  color: var(--clrAccent);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+
+body:not(.portfolio-home) .vp-doc h3 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.15rem;
+  color: var(--clrSecondary);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+body:not(.portfolio-home) .vp-doc h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--clrSecondary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+body:not(.portfolio-home) .vp-doc p {
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+  color: var(--clrSecondaryLight);
+  font-size: 1rem;
+}
+
+body:not(.portfolio-home) .vp-doc a {
+  color: var(--clrAccent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+body:not(.portfolio-home) .vp-doc a:hover {
+  border-bottom-color: var(--clrAccent);
+}
+
+body:not(.portfolio-home) .vp-doc blockquote {
+  border-left: 4px solid var(--clrAccent);
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  margin: 1.75rem 0;
+  font-style: italic;
+  color: var(--clrSecondaryLight);
+  background: rgba(221, 82, 69, 0.04);
+  border-radius: 0 6px 6px 0;
+}
+
+body:not(.portfolio-home) .vp-doc blockquote p {
+  margin-bottom: 0;
+}
+
+body:not(.portfolio-home) .vp-doc img {
+  border-radius: 12px;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+body:not(.portfolio-home) .vp-doc ul,
+body:not(.portfolio-home) .vp-doc ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--clrSecondaryLight);
+  line-height: 1.9;
+}
+
+body:not(.portfolio-home) .vp-doc li {
+  margin-bottom: 0.4rem;
+}
+
+body:not(.portfolio-home) .vp-doc hr {
+  border: none;
+  border-top: 1px solid rgba(249, 249, 246, 0.1);
+  margin: 2.5rem 0;
+}
+
+body:not(.portfolio-home) .vp-doc div[class*='language-'] {
+  border-radius: 10px;
+  margin: 1.75rem 0;
+  border: 1px solid rgba(249, 249, 246, 0.08);
+}
+
+body:not(.portfolio-home) .vp-doc strong {
+  color: var(--clrSecondary);
+  font-weight: 600;
+}
+
+body:not(.portfolio-home) .vp-doc code:not([class]) {
+  background: rgba(249, 249, 246, 0.08);
+  color: var(--clrAccent);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+/* Table of contents (aside) */
+.VPDocAside {
+  padding-left: 2.5rem !important;
+  border-left: none !important;
+}
+
+.outline-marker {
+  display: none !important;
+}
+
+.VPDocAsideOutline .content {
+  border-left: none !important;
+}
+
+.VPDocOutlineItem li {
+  border-left: none !important;
+}
+
+.VPDocAsideOutline .title {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: var(--clrAccent) !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.VPDocOutlineItem a,
+.outline-link {
+  font-size: 0.8rem !important;
+  color: rgba(249, 249, 246, 0.45) !important;
+  line-height: 1.8 !important;
+  transition: color 0.2s !important;
+  text-decoration: none !important;
+}
+
+.VPDocOutlineItem a:hover,
+.outline-link:hover,
+.VPDocOutlineItem a.active,
+.outline-link.active {
+  color: var(--clrSecondary) !important;
 }
 
 /* Fix layout centering */

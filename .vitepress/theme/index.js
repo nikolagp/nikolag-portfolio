@@ -1,16 +1,18 @@
 import { h, defineComponent, onMounted, watch, nextTick } from 'vue';
 import DefaultTheme from 'vitepress/theme';
-import { useRoute } from 'vitepress';
+import { useRoute, useData } from 'vitepress';
 import './custom.css';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import AppNavbar from './components/AppNavbar.vue';
 import AppFooter from './components/AppFooter.vue';
 import AppBlogIndex from './components/AppBlogIndex.vue';
+import PostHeader from './components/PostHeader.vue';
 
 const CustomLayout = defineComponent({
   setup() {
     const route = useRoute();
+    const { frontmatter } = useData();
 
     onMounted(() => {
       // Initialize AOS
@@ -35,7 +37,9 @@ const CustomLayout = defineComponent({
     return () =>
       h('div', { class: 'custom-layout' }, [
         h(AppNavbar),
-        h(DefaultTheme.Layout),
+        h(DefaultTheme.Layout, null, {
+          'doc-before': () => frontmatter.value.date ? h(PostHeader) : null,
+        }),
         h(AppFooter),
       ]);
   },

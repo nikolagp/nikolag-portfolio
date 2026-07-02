@@ -4,6 +4,7 @@ export default createContentLoader('posts/*.md', {
   excerpt: true,
   transform(raw) {
     return raw
+      .filter(({ url }) => !url.endsWith('/') && !url.endsWith('index.html'))
       .map(({ url, frontmatter, excerpt }) => ({
         title: frontmatter.title || 'Untitled',
         url,

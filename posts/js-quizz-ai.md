@@ -6,10 +6,6 @@ image: ''
 tags: ['AI', 'Java Script']
 ---
 
-# From Mindless Scrolling to a JavaScript Quiz App
-
-_Published on December 19, 2025_
-
 ## From Mindless Scrolling to Something Useful
 
 Usually, before going to bed - or already in bed - I’d catch myself scrolling through reels, jumping between different social media apps without any real purpose. Just wasting precious time that should’ve gone to sleep.

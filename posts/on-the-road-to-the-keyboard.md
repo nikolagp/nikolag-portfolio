@@ -5,9 +5,6 @@ description: Sharing my journey with software development.
 image: ''
 tags: ['Personal', 'Web Development']
 ---
-# On the Road to the Keyboard: Curiosity, detours, and learning my way into tech
-
-_Published on February 03, 2026_
 
 ## When Writing Fell Silent
 

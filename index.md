@@ -6,6 +6,7 @@ sidebar: false
 
 <script setup>
 import AppHeader from './.vitepress/theme/components/AppHeader.vue'
+import AppWorkExperience from './.vitepress/theme/components/AppWorkExperience.vue'
 import AppLatestPosts from './.vitepress/theme/components/AppLatestPosts.vue'
 import AppAbout from './.vitepress/theme/components/AppAbout.vue'
 import AppProjects from './.vitepress/theme/components/AppProjects.vue'
@@ -14,6 +15,7 @@ import AppContact from './.vitepress/theme/components/AppContact.vue'
 
 <div class="portfolio-home overflow-hidden">
   <AppHeader />
+  <AppWorkExperience />
   <AppLatestPosts />
   <AppAbout />
   <AppProjects />
