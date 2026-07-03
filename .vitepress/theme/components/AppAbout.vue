@@ -108,18 +108,17 @@ import { ref } from 'vue';
 const readMore = ref(false);
 
 const skills = [
-  'React.js', 'Redux', 'Redux-Saga',
-  'Node.js', 'Vue 3', 'TypeScript',
-  'JavaScript', 'Next.js', 'Vite',
-  'Supabase', 'AWS', 'WordPress',
-  'TailwindCSS', 'CSS', 'HTML',
+  'JavaScript', 'React.js', 'Redux', 'Redux-Saga',
+  'Node.js', 'TypeScript', 'Vue 3', 'Next.js',
+  'TailwindCSS', 'Material UI', 'HTML', 'CSS',
+  'AWS (S3, DynamoDB)', 'WordPress',
 ];
 
 const tools = [
-  'Jest', 'React Testing Library', 'TestCafe',
-  'Material UI', 'Swagger / OpenAPI', 'GitHub Actions',
-  'Bitbucket Pipelines', 'Jira', 'ConfigCat',
-  'Papertrail', 'VirtualBox', 'GitHub Copilot',
+  'Jest', 'React Testing Library', 'Mocha', 'TestCafe',
+  'Swagger / OpenAPI', 'Bitbucket Pipelines', 'GitHub Actions',
+  'ConfigCat', 'Jira', 'Papertrail',
+  'VirtualBox', 'VMware', 'GitHub Copilot',
 ];
 </script>
 
