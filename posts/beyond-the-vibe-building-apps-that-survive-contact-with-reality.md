@@ -1,5 +1,5 @@
 ---
-title: Beyond the Vibe: Building Apps That Survive Contact With Reality
+title: Beyond the Vibe - Building Apps That Survive Contact With Reality
 date: 2026-06-30
 description: AI can build a working app in hours, but can it survive real users, growing traffic, and future maintenance? Learn how Reliability, Scalability, and Maintainability (RSM) can help you build AI-assisted software that lasts.
 image: ''
