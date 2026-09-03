@@ -92,7 +92,7 @@ const jobs = [
   {
     company: 'X3M Labs',
     title: 'Software Developer – JavaScript',
-    period: 'Mar 2022 – Present',
+    period: 'Mar 2023 – Present',
     location: 'Bitola, MK (Hybrid)',
     bullets: [
       'Contributing daily to production web applications, implementing features and reusable components using React, Redux, and Redux-Saga with SSR and CSR patterns',
