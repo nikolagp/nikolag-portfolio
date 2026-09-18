@@ -282,16 +282,178 @@ body:not(.portfolio-home) .vp-doc hr {
   margin: 2.5rem 0;
 }
 
+/* ============================================
+   Code Blocks
+   ============================================ */
+
+/* Fenced code block wrapper */
 body:not(.portfolio-home) .vp-doc div[class*='language-'] {
   border-radius: 10px;
   margin: 1.75rem 0;
   border: 1px solid rgba(249, 249, 246, 0.08);
+  background: rgb(13, 17, 23);
+  overflow: hidden;
+  position: relative;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(249, 249, 246, 0.02);
 }
 
-body:not(.portfolio-home) .vp-doc strong {
-  color: var(--clrSecondary);
-  font-weight: 600;
+/* Pre element inside code blocks */
+body:not(.portfolio-home) .vp-doc div[class*='language-'] pre {
+  padding: 1.25rem 0;
+  margin: 0;
+  overflow-x: auto;
+  background: transparent !important;
 }
+
+/* Code text */
+body:not(.portfolio-home) .vp-doc div[class*='language-'] code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Space Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.75;
+  background: transparent !important;
+}
+
+/* Language label pill — VitePress renders a <span class="lang"> */
+body:not(.portfolio-home) .vp-doc div[class*='language-'] .lang {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  z-index: 2;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(249, 249, 246, 0.3);
+  padding: 0.6rem 0.75rem 0.4rem 0.75rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Copy button — VitePress renders a <button class="copy"> */
+body:not(.portfolio-home) .vp-doc div[class*='language-'] button.copy {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.5rem;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(249, 249, 246, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+body:not(.portfolio-home) .vp-doc div[class*='language-'] button.copy:hover {
+  color: rgba(249, 249, 246, 0.8);
+  background: rgba(249, 249, 246, 0.06);
+  border-color: rgba(249, 249, 246, 0.1);
+}
+
+body:not(.portfolio-home) .vp-doc div[class*='language-'] button.copy.copied {
+  color: var(--clrAccent);
+  border-color: rgba(221, 82, 69, 0.3);
+}
+
+/* Line numbers gutter */
+body:not(.portfolio-home) .vp-doc .line-numbers-mode .line-numbers-wrapper {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-right: 1rem;
+  padding-left: 1.25rem;
+  border-right: 1px solid rgba(249, 249, 246, 0.06);
+  color: rgba(249, 249, 246, 0.2);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Space Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.75;
+  text-align: right;
+  user-select: none;
+  min-width: 2.5rem;
+}
+
+/* Highlighted line (if using line highlighting) */
+body:not(.portfolio-home) .vp-doc div[class*='language-'] .highlighted {
+  background: rgba(221, 82, 69, 0.08);
+  margin: 0 -1.5rem;
+  padding: 0 1.5rem;
+  display: inline-block;
+  width: calc(100% + 3rem);
+}
+
+/* Horizontal scrollbar */
+body:not(.portfolio-home) .vp-doc div[class*='language-'] pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+body:not(.portfolio-home) .vp-doc div[class*='language-'] pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body:not(.portfolio-home) .vp-doc div[class*='language-'] pre::-webkit-scrollbar-thumb {
+  background: rgba(249, 249, 246, 0.1);
+  border-radius: 3px;
+}
+
+body:not(.portfolio-home) .vp-doc div[class*='language-'] pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 249, 246, 0.2);
+}
+
+/* ============================================
+   Code Groups (multi-tab code blocks)
+   ============================================ */
+
+body:not(.portfolio-home) .vp-doc .vp-code-group {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(249, 249, 246, 0.08);
+  margin: 1.75rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+body:not(.portfolio-home) .vp-doc .vp-code-group .tabs {
+  background: rgba(8, 19, 31, 0.8);
+  border-bottom: 1px solid rgba(249, 249, 246, 0.06);
+  padding: 0 0.5rem;
+}
+
+body:not(.portfolio-home) .vp-doc .vp-code-group .tab {
+  color: rgba(249, 249, 246, 0.4);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem;
+  transition: color 0.2s;
+}
+
+body:not(.portfolio-home) .vp-doc .vp-code-group .tab:hover {
+  color: rgba(249, 249, 246, 0.7);
+}
+
+body:not(.portfolio-home) .vp-doc .vp-code-group .tab.active {
+  color: var(--clrAccent);
+  border-bottom-color: var(--clrAccent);
+}
+
+/* Code blocks inside tabs inherit the styles above */
+body:not(.portfolio-home) .vp-doc .vp-code-group div[class*='language-'] {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ============================================
+   Inline Code
+   ============================================ */
 
 body:not(.portfolio-home) .vp-doc code:not([class]) {
   background: rgba(249, 249, 246, 0.08);
@@ -299,6 +461,12 @@ body:not(.portfolio-home) .vp-doc code:not([class]) {
   padding: 0.15em 0.4em;
   border-radius: 4px;
   font-size: 0.875em;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Space Mono', monospace;
+}
+
+body:not(.portfolio-home) .vp-doc strong {
+  color: var(--clrSecondary);
+  font-weight: 600;
 }
 
 /* Table of contents (aside) */
